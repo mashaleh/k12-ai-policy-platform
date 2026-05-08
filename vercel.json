@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/TechTelligence_AI_Policy_Platform.html" }
+  ]
+}
