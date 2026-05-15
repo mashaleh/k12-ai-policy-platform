@@ -376,6 +376,7 @@ mark{background:rgba(46,117,182,.2);color:var(--blue);border-radius:2px;padding:
     <div class="sb-item" onclick="nav('templates')" id="nav-templates"><span>📋</span>Templates (10)</div>
     <div class="sb-item" onclick="nav('frameworks')" id="nav-frameworks"><span>⚖️</span>Legal Frameworks</div>
     <div class="sb-item" onclick="nav('uae')" id="nav-uae"><span>🌍</span>UAE &amp; International</div>
+    <div class="sb-item" onclick="nav('contact')" id="nav-contact"><span>✉️</span>Contact Us</div>
   </div>
   <div class="sb-section">
     <div class="sb-item" id="sb-cert" style="display:none;background:rgba(255,215,0,.12);border-left-color:#FFD700" onclick="openCert()"><span>🏆</span><strong>Get Certificate</strong></div>
@@ -1954,6 +1955,77 @@ mark{background:rgba(46,117,182,.2);color:var(--blue);border-radius:2px;padding:
   </div>
 </section>
 
+<section id="contact" class="page">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 style="font-size:22px;font-weight:800;color:var(--navy);margin-bottom:4px;">Get in Touch</h2>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:28px;">Reach out to our team — we're here to help your school navigate AI policy.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <!-- Left column: contact info -->
+      <div>
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">✉️</div>
+            <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;">Email</div><div style="font-weight:600;color:var(--text);">info@techtelligence.ae</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📞</div>
+            <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;">Phone</div><div style="font-weight:600;color:var(--text);">+971 52 2215 883</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:44px;height:44px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📍</div>
+            <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;">Location</div><div style="font-weight:600;color:var(--text);">Pan-MENA &amp; Africa — Remote &amp; On-Site Delivery</div></div>
+          </div>
+        </div>
+        <div style="background:var(--navy);border-radius:14px;padding:24px;">
+          <div style="color:#D97706;font-size:16px;font-weight:800;margin-bottom:8px;">Book a Free Consultation</div>
+          <p style="color:rgba(255,255,255,.8);font-size:13px;margin-bottom:18px;line-height:1.6;">Schedule a 30-minute call with one of our education AI specialists to explore what's possible for your school.</p>
+          <a href="mailto:info@techtelligence.ae?subject=Free Consultation Request" style="display:block;background:#D97706;color:#000;font-weight:700;text-align:center;padding:13px 20px;border-radius:8px;text-decoration:none;font-size:14px;">Schedule Now →</a>
+        </div>
+      </div>
+      <!-- Right column: contact form -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;">
+        <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:20px;">Send Us a Message</h3>
+        <form onsubmit="handleContactForm(event)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+            <div>
+              <label style="font-size:11.5px;color:var(--muted);display:block;margin-bottom:5px;">First Name</label>
+              <input type="text" id="cf-first" required style="width:100%;padding:9px 12px;border-radius:7px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:13px;box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:11.5px;color:var(--muted);display:block;margin-bottom:5px;">Last Name</label>
+              <input type="text" id="cf-last" required style="width:100%;padding:9px 12px;border-radius:7px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:13px;box-sizing:border-box;">
+            </div>
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:11.5px;color:var(--muted);display:block;margin-bottom:5px;">Email Address</label>
+            <input type="email" id="cf-email" required style="width:100%;padding:9px 12px;border-radius:7px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:13px;box-sizing:border-box;">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:11.5px;color:var(--muted);display:block;margin-bottom:5px;">School / Institution</label>
+            <input type="text" id="cf-school" style="width:100%;padding:9px 12px;border-radius:7px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:13px;box-sizing:border-box;">
+          </div>
+          <div style="margin-bottom:12px;">
+            <label style="font-size:11.5px;color:var(--muted);display:block;margin-bottom:5px;">I'm interested in</label>
+            <select id="cf-interest" style="width:100%;padding:9px 12px;border-radius:7px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:13px;box-sizing:border-box;">
+              <option value="">Select an option</option>
+              <option>AI Policy Training Programme</option>
+              <option>On-Site Workshop</option>
+              <option>Policy Document Review</option>
+              <option>Free Consultation</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div style="margin-bottom:18px;">
+            <label style="font-size:11.5px;color:var(--muted);display:block;margin-bottom:5px;">Message</label>
+            <textarea id="cf-message" rows="4" placeholder="Tell us about your school and what you're hoping to achieve..." style="width:100%;padding:9px 12px;border-radius:7px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:13px;box-sizing:border-box;resize:vertical;font-family:inherit;"></textarea>
+          </div>
+          <button type="submit" style="width:100%;background:var(--navy);color:#fff;font-weight:700;padding:12px;border-radius:8px;border:none;cursor:pointer;font-size:14px;">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 </div><!-- end #app -->
 
@@ -2013,6 +2085,11 @@ let isDark = localStorage.getItem('tt_dark') === 'true';
 })();
 
 // ── Navigation ─────────────────────────────────────────────────────────
+function handleContactForm(e){
+  e.preventDefault();
+  toast('Message sent! We\'ll be in touch within 24 hours.','success');
+  e.target.reset();
+}
 function nav(id){
   document.querySelectorAll('.page').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.sb-item').forEach(i=>i.classList.remove('active'));
