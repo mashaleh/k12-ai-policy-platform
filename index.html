@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K–12 AI Policy Training Programme | TechTelligence Academy</title>
+<meta name="description" content="From document creation to full implementation. A complete K–12 AI policy professional development programme — UAE & International Edition. Aligned with UAE National AI Strategy 2031, UNESCO, FERPA, COPPA, and PDPL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════ TOKENS ════════════════════════════════════ */
+:root{
+  --bg:#EEF2F7;--surface:#FFFFFF;--surface-2:#F8FAFC;
+  --navy-deep:#070E1B;--navy:#0F2744;--navy-mid:#1E3A5F;--navy-soft:#2B4A73;
+  --blue:#1D6CB8;--blue-bright:#3B82F6;--blue-pale:#EFF6FF;
+  --teal:#0891B2;--teal-bright:#06B6D4;
+  --gold:#F59E0B;--gold-light:#FCD34D;--gold-dark:#D97706;
+  --emerald:#059669;--emerald-light:#10B981;
+  --purple:#7C3AED;--purple-light:#A78BFA;
+  --red:#DC2626;--rose:#E11D48;
+  --text:#0F172A;--text-mid:#334155;--text-muted:#64748B;--text-light:#94A3B8;
+  --border:#E2E8F0;--border-mid:#CBD5E1;
+  --radius:14px;--radius-sm:8px;--radius-lg:20px;--radius-xl:24px;
+  --shadow-sm:0 2px 8px rgba(15,39,68,.06);
+  --shadow:0 4px 24px rgba(15,39,68,.08);
+  --shadow-md:0 12px 36px rgba(15,39,68,.12);
+  --shadow-lg:0 24px 64px rgba(15,39,68,.18);
+  --transition:.25s cubic-bezier(.4,0,.2,1);
+  --nav-h:84px;
+  --font-sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-display:'Syne','Inter',system-ui,sans-serif;
+}
+/* ══════════════════════════════ RESET ═════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;}
+::selection{background:rgba(245,158,11,.25);}
+/* ══════════════════════════════ UTILITIES ═════════════════════════════════ */
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.container-narrow{max-width:920px;margin:0 auto;padding:0 24px;}
+.section{padding:104px 0;}
+.section-sm{padding:64px 0;}
+.gradient-text{background:linear-gradient(135deg,#FCD34D 0%,#F59E0B 40%,#06B6D4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hidden{display:none!important;}
+.no-scroll{overflow:hidden;}
+/* ══════════════════════════════ NAVIGATION ════════════════════════════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:rgba(7,14,27,.7);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;transition:var(--transition);}
+#nav.scrolled{background:rgba(7,14,27,.95);box-shadow:0 4px 30px rgba(0,0,0,.4);}
+.nav-inner{max-width:1240px;margin:0 auto;padding:0 24px;width:100%;display:flex;align-items:center;gap:32px;}
+.nav-logo{display:flex;align-items:center;gap:12px;flex-shrink:0;cursor:pointer;}
+.nav-logo-mark{width:62px;height:62px;border-radius:14px;background:radial-gradient(circle at 30% 30%,#1a2238,#000 70%);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;padding:6px;border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 18px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06);position:relative;}
+.nav-logo-mark::after{content:'';position:absolute;inset:-1px;border-radius:12px;padding:1px;background:linear-gradient(135deg,#3B82F6,#06B6D4,#F59E0B,#EC4899);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.55;pointer-events:none;}
+.nav-logo-mark img{width:100%;height:100%;object-fit:contain;display:block;filter:brightness(1.05) contrast(1.05);position:relative;z-index:1;}
+.nav-logo-text strong{display:block;font-family:var(--font-display);font-size:15px;font-weight:800;letter-spacing:-.3px;line-height:1.1;background:linear-gradient(110deg,#FCD34D 0%,#F59E0B 25%,#EC4899 50%,#A78BFA 75%,#06B6D4 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoShimmer 6s linear infinite;}
+.nav-logo-text span{display:block;font-size:9.5px;font-weight:800;margin-top:3px;letter-spacing:2.2px;background:linear-gradient(90deg,#06B6D4 0%,#3B82F6 33%,#A78BFA 66%,#F59E0B 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoShimmer 6s linear infinite reverse;text-transform:uppercase;}
+@keyframes logoShimmer{0%{background-position:0% center;}100%{background-position:200% center;}}
+.nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;}
+/* ── colorful nav links ── */
+.nav-link{padding:9px 16px;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer;transition:var(--transition);white-space:nowrap;border:none;background:none;color:rgba(255,255,255,.55);position:relative;letter-spacing:.1px;}
+.nav-link::before{content:'';position:absolute;inset:0;border-radius:9px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:-1;}
+.nav-link::after{content:'';position:absolute;bottom:5px;left:16px;right:16px;height:2px;border-radius:2px;transform:scaleX(0);transition:transform .35s cubic-bezier(.4,0,.2,1);transform-origin:center;}
+.nav-link:hover{color:#fff;}
+.nav-link:hover::before{opacity:1;}
+.nav-link.active{color:#fff;}
+.nav-link.active::before{opacity:1;}
+.nav-link.active::after{transform:scaleX(1);}
+.nav-link:hover::after{transform:scaleX(.5);opacity:.5;}
+.nav-link[data-page="home"]::before{background:linear-gradient(135deg,rgba(96,165,250,.18),rgba(34,211,238,.18));}
+.nav-link[data-page="home"].active,.nav-link[data-page="home"]:hover{color:#93C5FD;}
+.nav-link[data-page="home"]::after{background:linear-gradient(90deg,#60A5FA,#22D3EE);box-shadow:0 0 8px rgba(96,165,250,.6);}
+.nav-link[data-page="about"]::before{background:linear-gradient(135deg,rgba(192,132,252,.18),rgba(244,114,182,.18));}
+.nav-link[data-page="about"].active,.nav-link[data-page="about"]:hover{color:#D8B4FE;}
+.nav-link[data-page="about"]::after{background:linear-gradient(90deg,#C084FC,#F472B6);box-shadow:0 0 8px rgba(192,132,252,.6);}
+.nav-link[data-page="contact"]::before{background:linear-gradient(135deg,rgba(52,211,153,.18),rgba(34,211,238,.18));}
+.nav-link[data-page="contact"].active,.nav-link[data-page="contact"]:hover{color:#6EE7B7;}
+.nav-link[data-page="contact"]::after{background:linear-gradient(90deg,#34D399,#22D3EE);box-shadow:0 0 8px rgba(52,211,153,.6);}
+/* ── book a demo CTA ── */
+.nav-cta{margin-left:8px;padding:11px 22px;border-radius:10px;background:linear-gradient(135deg,#F59E0B,#F97316);color:#fff;font-size:13.5px;font-weight:700;cursor:pointer;border:none;transition:var(--transition);white-space:nowrap;box-shadow:0 4px 16px rgba(245,158,11,.4);display:inline-flex;align-items:center;gap:6px;}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(245,158,11,.55);}
+/* ── back button ── */
+.nav-back-btn{display:flex;align-items:center;gap:6px;padding:9px 16px 9px 12px;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:var(--transition);flex-shrink:0;letter-spacing:.2px;white-space:nowrap;margin-right:6px;}
+.nav-back-btn:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.45);transform:translateX(-2px);box-shadow:0 4px 14px rgba(0,0,0,.3);}
+.nav-back-arrow{font-size:15px;transition:transform .25s cubic-bezier(.4,0,.2,1);display:inline-block;}
+.nav-back-btn:hover .nav-back-arrow{transform:translateX(-4px);}
+.nav-back-btn.site-return{border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.12);color:#FCD34D;}
+.nav-back-btn.site-return:hover{background:rgba(245,158,11,.22);border-color:rgba(245,158,11,.7);color:#fff;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto;border:none;background:transparent;}
+.nav-hamburger span{width:22px;height:2px;background:rgba(255,255,255,.8);border-radius:2px;transition:var(--transition);}
+/* ══════════════════════════════ MOBILE MENU ══════════════════════════════ */
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:rgba(7,14,27,.98);backdrop-filter:blur(20px);z-index:999;padding:24px;flex-direction:column;gap:8px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu-link{padding:16px 20px;border-radius:12px;font-size:16px;font-weight:700;color:rgba(255,255,255,.8);cursor:pointer;border:none;text-align:left;width:100%;transition:var(--transition);display:flex;align-items:center;gap:12px;position:relative;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);}
+.mobile-menu-link::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:0 2px 2px 0;opacity:.8;}
+.mobile-menu-link[data-mobile="home"]::before{background:linear-gradient(180deg,#60A5FA,#22D3EE);}
+.mobile-menu-link[data-mobile="about"]::before{background:linear-gradient(180deg,#C084FC,#F472B6);}
+.mobile-menu-link[data-mobile="contact"]::before{background:linear-gradient(180deg,#34D399,#22D3EE);}
+.mobile-menu-link[data-mobile="home"]{color:#93C5FD;}
+.mobile-menu-link[data-mobile="about"]{color:#D8B4FE;}
+.mobile-menu-link[data-mobile="contact"]{color:#6EE7B7;}
+.mobile-menu-link:hover{background:rgba(255,255,255,.07);transform:translateX(4px);border-color:rgba(255,255,255,.1);}
+.mobile-menu-link.active{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;}
+.mobile-menu-back{padding:14px 20px;border-radius:12px;font-size:14px;font-weight:600;color:rgba(255,255,255,.55);cursor:pointer;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);text-align:left;width:100%;transition:var(--transition);display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+.mobile-menu-back:hover{background:rgba(255,255,255,.07);color:#fff;}
+.mobile-menu-cta{padding:16px;border-radius:12px;margin-top:8px;background:linear-gradient(135deg,#F59E0B,#F97316);color:#fff;font-size:15px;font-weight:700;cursor:pointer;border:none;}
+/* ══════════════════════════════ PAGE SYSTEM ══════════════════════════════ */
+.page{display:none;animation:pageFade .4s ease;}
+.page.active{display:block;}
+@keyframes pageFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+/* ══════════════════════════════ HERO ═════════════════════════════════════ */
+#hero{min-height:100vh;background:var(--navy-deep);position:relative;overflow:hidden;display:flex;align-items:center;padding:calc(var(--nav-h) + 32px) 0 48px;}
+.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;animation:heroFloat 12s ease-in-out infinite;}
+.hero-orb-1{width:620px;height:620px;background:radial-gradient(circle,#1D6CB8 0%,transparent 70%);top:-220px;right:-160px;}
+.hero-orb-2{width:480px;height:480px;background:radial-gradient(circle,#0891B2 0%,transparent 70%);bottom:-180px;left:-120px;animation-delay:4s;}
+.hero-orb-3{width:320px;height:320px;background:radial-gradient(circle,#F59E0B 0%,transparent 70%);top:40%;left:55%;animation-delay:7s;opacity:.18;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at center,black,transparent 75%);}
+@keyframes heroFloat{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(30px,-40px) scale(1.06);}66%{transform:translate(-20px,30px) scale(.94);}}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;width:100%;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.28);border-radius:100px;padding:7px 16px;font-size:11.5px;font-weight:700;color:#FCD34D;margin-bottom:24px;text-transform:uppercase;letter-spacing:1px;}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:#FCD34D;animation:pulse 2s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.4);}}
+.hero-title{font-family:var(--font-display);font-size:clamp(38px,5vw,62px);font-weight:800;color:#fff;line-height:1.05;margin-bottom:20px;letter-spacing:-1.2px;}
+.hero-title-line{display:block;}
+.hero-sub{font-size:17.5px;color:rgba(255,255,255,.62);line-height:1.7;margin-bottom:32px;max-width:540px;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+.hero-pill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:7px 14px;font-size:12px;font-weight:500;color:rgba(255,255,255,.7);display:inline-flex;gap:6px;align-items:center;}
+.hero-pill strong{color:#fff;font-weight:700;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary-lg{padding:16px 32px;border-radius:12px;background:linear-gradient(135deg,#1D6CB8 0%,#0891B2 100%);color:#fff;font-size:15px;font-weight:700;cursor:pointer;border:none;transition:var(--transition);display:inline-flex;align-items:center;gap:8px;box-shadow:0 10px 32px rgba(29,108,184,.4);}
+.btn-primary-lg:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(29,108,184,.55);}
+.btn-secondary-lg{padding:16px 32px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:15px;font-weight:600;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:8px;}
+.btn-secondary-lg:hover{background:rgba(255,255,255,.14);transform:translateY(-2px);}
+.btn-arrow{font-size:18px;transition:transform var(--transition);}
+.btn-primary-lg:hover .btn-arrow,.btn-secondary-lg:hover .btn-arrow{transform:translateX(4px);}
+/* Hero Visual */
+.hero-visual{position:relative;}
+.hero-card-main{background:linear-gradient(135deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,.02) 100%);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:28px;backdrop-filter:blur(10px);position:relative;}
+.hero-card-label{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:20px;display:flex;align-items:center;gap:8px;}
+.hero-card-label::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);}
+.phase-mini-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.phase-mini{display:flex;align-items:center;gap:12px;padding:12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;transition:var(--transition);}
+.phase-mini:hover{background:rgba(255,255,255,.06);transform:translateX(4px);}
+.phase-mini-dot{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;}
+.phase-mini-info{flex:1;min-width:0;}
+.phase-mini-name{font-size:12.5px;font-weight:600;color:#fff;line-height:1.3;}
+.phase-mini-meta{font-size:10.5px;color:rgba(255,255,255,.4);margin-top:1px;}
+.phase-mini-check{font-size:14px;color:rgba(255,255,255,.3);}
+.hero-float{position:absolute;background:linear-gradient(135deg,#F59E0B,#F97316);color:#fff;border-radius:14px;padding:12px 16px;font-size:11.5px;font-weight:700;box-shadow:0 12px 36px rgba(245,158,11,.4);display:flex;align-items:center;gap:8px;animation:floatY 6s ease-in-out infinite;}
+.hero-float-1{top:-16px;right:-12px;}
+.hero-float-2{bottom:-20px;left:-20px;animation-delay:3s;background:linear-gradient(135deg,#1D6CB8,#0891B2);box-shadow:0 12px 36px rgba(8,145,178,.4);}
+.hero-float-big{font-family:var(--font-display);font-size:22px;font-weight:800;line-height:1;}
+.hero-float-small{font-size:10px;opacity:.85;text-transform:uppercase;letter-spacing:.5px;}
+@keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+/* ══════════════════════════════ STATS STRIP ═════════════════════════════ */
+#stats-strip{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);padding:64px 0;position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.04);}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;z-index:1;}
+.stat-item{text-align:center;padding:18px;border-right:1px solid rgba(255,255,255,.06);position:relative;}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:var(--font-display);font-size:46px;font-weight:800;color:#fff;line-height:1;margin-bottom:10px;display:block;background:linear-gradient(135deg,#FCD34D 0%,#F59E0B 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.stat-label{font-size:11.5px;color:rgba(255,255,255,.48);line-height:1.45;font-weight:500;}
+/* ══════════════════════════════ SECTION HEADERS ══════════════════════════ */
+.section-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:2.4px;color:var(--teal);margin-bottom:14px;}
+.section-eyebrow.gold{color:var(--gold);}
+.section-eyebrow.dark-bg{color:var(--gold-light);}
+.section-title{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:18px;letter-spacing:-.6px;}
+.section-title.light{color:#fff;}
+.section-sub{font-size:17px;color:var(--text-muted);line-height:1.7;max-width:640px;}
+.section-sub.light{color:rgba(255,255,255,.55);}
+.section-header{margin-bottom:60px;}
+.section-header.center{text-align:center;}
+.section-header.center .section-sub{margin:0 auto;}
+/* ══════════════════════════════ CHALLENGE ════════════════════════════════ */
+#challenge{background:var(--surface);}
+.challenge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.challenge-card{padding:36px 28px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface-2);transition:var(--transition);position:relative;overflow:hidden;}
+.challenge-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,currentColor,transparent);opacity:0;transition:var(--transition);}
+.challenge-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:transparent;}
+.challenge-card:hover::before{opacity:1;}
+.challenge-card.color-red{color:var(--red);}
+.challenge-card.color-orange{color:var(--gold-dark);}
+.challenge-card.color-blue{color:var(--blue);}
+.challenge-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:22px;background:rgba(var(--icon-rgb,29,108,184),.1);}
+.challenge-card.color-red .challenge-icon{background:rgba(220,38,38,.1);}
+.challenge-card.color-orange .challenge-icon{background:rgba(217,119,6,.1);}
+.challenge-card.color-blue .challenge-icon{background:rgba(29,108,184,.1);}
+.challenge-card h3{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:10px;letter-spacing:-.2px;}
+.challenge-card p{font-size:14px;color:var(--text-muted);line-height:1.65;}
+.challenge-stat{margin-top:18px;padding-top:18px;border-top:1px solid var(--border);font-size:12px;font-weight:600;color:var(--text-mid);}
+.challenge-stat strong{font-size:20px;display:block;color:inherit;margin-bottom:2px;}
+/* ══════════════════════════════ TRACKS ══════════════════════════════════ */
+#tracks{background:var(--bg);position:relative;}
+.tracks-intro{text-align:center;margin-bottom:56px;}
+.tracks-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+.track-card{border-radius:24px;overflow:hidden;transition:var(--transition);background:var(--surface);box-shadow:var(--shadow);position:relative;}
+.track-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);}
+.track-card.featured::after{content:'MOST COMPREHENSIVE';position:absolute;top:24px;right:24px;background:linear-gradient(135deg,#F59E0B,#F97316);color:#fff;font-size:10px;font-weight:800;padding:4px 12px;border-radius:100px;letter-spacing:.8px;z-index:2;box-shadow:0 4px 14px rgba(245,158,11,.4);}
+.track-hdr{padding:40px 36px 32px;color:#fff;position:relative;overflow:hidden;}
+.track-hdr::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 80% 20%,rgba(255,255,255,.1) 0%,transparent 50%);}
+.track-free .track-hdr{background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);}
+.track-premium .track-hdr{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy-mid) 50%,var(--gold-dark) 130%);}
+.track-badge{display:inline-block;padding:5px 12px;border-radius:100px;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:18px;position:relative;z-index:1;}
+.track-free .track-badge{background:rgba(255,255,255,.15);color:#fff;}
+.track-premium .track-badge{background:rgba(245,158,11,.25);color:#FCD34D;border:1px solid rgba(245,158,11,.4);}
+.track-name{font-family:var(--font-display);font-size:30px;font-weight:800;margin-bottom:10px;position:relative;z-index:1;letter-spacing:-.5px;}
+.track-tagline{font-size:14.5px;opacity:.75;position:relative;z-index:1;line-height:1.5;}
+.track-body{padding:32px 36px 36px;}
+.track-price-block{display:flex;align-items:baseline;gap:10px;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--border);}
+.track-price-amount{font-family:var(--font-display);font-size:38px;font-weight:800;color:var(--navy);line-height:1;letter-spacing:-1px;}
+.track-price-period{font-size:13px;color:var(--text-muted);font-weight:500;}
+.track-price-note{display:block;font-size:12px;color:var(--text-muted);margin-top:4px;}
+.track-features{list-style:none;margin-bottom:32px;}
+.track-feature{display:flex;align-items:flex-start;gap:12px;padding:10px 0;font-size:14px;color:var(--text-mid);line-height:1.5;}
+.track-feature-check{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:1px;}
+.track-free .track-feature-check{background:#EFF6FF;color:var(--blue);}
+.track-premium .track-feature-check{background:#FEF3C7;color:var(--gold-dark);}
+.track-feature-text strong{color:var(--text);font-weight:700;}
+.btn-track{width:100%;padding:16px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;border:none;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:8px;}
+.track-free .btn-track{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;box-shadow:0 6px 20px rgba(29,108,184,.3);}
+.track-premium .btn-track{background:linear-gradient(135deg,var(--navy),var(--gold-dark));color:#fff;box-shadow:0 6px 20px rgba(245,158,11,.3);}
+.btn-track:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.2);}
+.track-meta-row{margin-top:18px;text-align:center;font-size:12px;color:var(--text-muted);}
+/* ══════════════════════════════ JOURNEY ═════════════════════════════════ */
+#journey{background:var(--navy-deep);padding:104px 0;position:relative;overflow:hidden;}
+#journey::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(8,145,178,.12),transparent 50%),radial-gradient(circle at 80% 70%,rgba(245,158,11,.08),transparent 50%);}
+.journey-content{position:relative;z-index:1;}
+.journey-timeline{position:relative;margin-top:60px;}
+.journey-line{position:absolute;top:32px;left:5%;right:5%;height:2px;background:linear-gradient(90deg,transparent,#7030A0 5%,#1F4E79 18%,#2E75B6 30%,#16A34A 43%,#C55A11 56%,#C00000 69%,#4472C4 82%,#375623 95%,transparent);opacity:.4;}
+.journey-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px;position:relative;}
+.journey-phase{display:flex;flex-direction:column;align-items:center;text-align:center;cursor:pointer;transition:var(--transition);}
+.journey-phase:hover{transform:translateY(-4px);}
+.journey-dot{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;font-weight:800;color:#fff;margin-bottom:18px;transition:var(--transition);box-shadow:0 8px 24px rgba(0,0,0,.3);position:relative;z-index:1;}
+.journey-phase:hover .journey-dot{transform:scale(1.12);box-shadow:0 0 0 4px rgba(255,255,255,.1),0 12px 32px rgba(0,0,0,.4);}
+.journey-num{font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.journey-phase-name{font-size:12px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:4px;}
+.journey-phase-time{font-size:10.5px;color:rgba(255,255,255,.45);}
+.journey-bottom{margin-top:48px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.journey-stat{padding:14px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#fff;font-size:13px;display:flex;align-items:center;gap:10px;}
+.journey-stat strong{font-family:var(--font-display);color:var(--gold);font-size:18px;}
+/* ══════════════════════════════ MODULES PREVIEW ═════════════════════════ */
+#modules-preview{background:var(--surface);}
+.modules-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.module-mini{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--surface-2);transition:var(--transition);cursor:pointer;position:relative;}
+.module-mini:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--blue-bright);}
+.module-mini-hdr{padding:22px 20px 14px;display:flex;align-items:center;gap:14px;}
+.module-num{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:15px;font-weight:800;color:#fff;flex-shrink:0;}
+.module-mini-title{font-size:13.5px;font-weight:700;color:var(--navy);line-height:1.3;}
+.module-mini-meta{font-size:11px;color:var(--text-muted);margin-top:3px;font-weight:500;}
+.module-mini-body{padding:0 20px 20px;}
+.module-mini-body p{font-size:12.5px;color:var(--text-muted);line-height:1.55;}
+.module-lock{position:absolute;top:14px;right:14px;width:26px;height:26px;border-radius:8px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--gold-dark);}
+.modules-cta{text-align:center;margin-top:48px;}
+/* ══════════════════════════════ PILLARS ═════════════════════════════════ */
+#pillars{background:var(--bg);}
+.pillars-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+.pillar-card{padding:32px 22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);text-align:center;transition:var(--transition);position:relative;}
+.pillar-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);}
+.pillar-icon{width:72px;height:72px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 22px;color:#fff;}
+.pillar-name{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.2px;}
+.pillar-sub{font-size:12px;color:var(--text-muted);line-height:1.5;}
+/* ══════════════════════════════ FRAMEWORKS ═══════════════════════════════ */
+#frameworks-aligned{background:var(--surface);padding:88px 0;}
+.frameworks-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;margin-top:48px;}
+.framework-chip{padding:18px 16px;border-radius:14px;border:1.5px solid var(--border);background:var(--surface-2);text-align:center;font-size:12.5px;font-weight:700;color:var(--text-mid);transition:var(--transition);position:relative;}
+.framework-chip:hover{border-color:var(--blue);background:var(--blue-pale);color:var(--blue);transform:translateY(-3px);box-shadow:var(--shadow-sm);}
+.framework-chip span{display:block;font-size:10.5px;color:var(--text-light);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:.5px;}
+.framework-chip:hover span{color:var(--blue);}
+/* ══════════════════════════════ CERTIFICATIONS ══════════════════════════ */
+#certifications{background:var(--navy-deep);padding:104px 0;position:relative;overflow:hidden;}
+#certifications::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(8,145,178,.15),transparent 60%);}
+.cert-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;position:relative;z-index:1;}
+.cert-tier{border-radius:22px;overflow:hidden;transition:var(--transition);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);}
+.cert-tier:hover{transform:translateY(-8px);background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.15);}
+.cert-tier.tier-advanced{background:linear-gradient(180deg,rgba(245,158,11,.08) 0%,rgba(255,255,255,.03) 100%);border-color:rgba(245,158,11,.2);}
+.cert-tier-hdr{padding:36px 28px 24px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06);}
+.cert-tier-icon{width:72px;height:72px;border-radius:20px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:32px;}
+.tier-advanced .cert-tier-icon{background:linear-gradient(135deg,#F59E0B,#D97706);}
+.cert-tier-name{font-family:var(--font-display);font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.3px;}
+.cert-tier-subtitle{font-size:12.5px;color:rgba(255,255,255,.5);}
+.cert-tier-body{padding:28px;}
+.cert-req-list{list-style:none;}
+.cert-req{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;color:rgba(255,255,255,.7);line-height:1.5;}
+.cert-req:last-child{border-bottom:none;}
+.cert-req-icon{width:18px;height:18px;border-radius:5px;background:rgba(8,145,178,.2);color:var(--teal-bright);display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0;margin-top:2px;}
+.tier-advanced .cert-req-icon{background:rgba(245,158,11,.2);color:var(--gold-light);}
+/* ══════════════════════════════ AUDIENCE ════════════════════════════════ */
+#audience{background:var(--bg);}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.audience-card{padding:26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);display:flex;gap:16px;transition:var(--transition);}
+.audience-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent;}
+.audience-icon{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.audience-info h3{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:6px;letter-spacing:-.2px;}
+.audience-info p{font-size:13px;color:var(--text-muted);line-height:1.55;}
+/* ══════════════════════════════ TESTIMONIAL ═════════════════════════════ */
+#proof{background:var(--surface);padding:88px 0;}
+.proof-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;}
+.proof-quote{font-family:var(--font-display);font-size:24px;font-weight:600;color:var(--navy);line-height:1.4;letter-spacing:-.3px;position:relative;padding-left:24px;border-left:4px solid var(--gold);}
+.proof-author{margin-top:24px;display:flex;align-items:center;gap:14px;}
+.proof-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:16px;}
+.proof-name{font-size:14px;font-weight:700;color:var(--text);}
+.proof-role{font-size:12.5px;color:var(--text-muted);}
+.proof-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.proof-stat-card{padding:24px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;}
+.proof-stat-num{font-family:var(--font-display);font-size:32px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:6px;}
+.proof-stat-label{font-size:12px;color:rgba(255,255,255,.6);line-height:1.4;}
+/* ══════════════════════════════ CTA BANNER ══════════════════════════════ */
+#cta-banner{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy-mid) 50%,#0891B2 130%);padding:104px 0;text-align:center;position:relative;overflow:hidden;}
+#cta-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 30% 50%,rgba(245,158,11,.15),transparent 50%);}
+.cta-content{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:0 24px;}
+.cta-title{font-family:var(--font-display);font-size:clamp(32px,4.5vw,48px);font-weight:800;color:#fff;margin-bottom:18px;line-height:1.1;letter-spacing:-.6px;}
+.cta-sub{font-size:18px;color:rgba(255,255,255,.65);margin-bottom:40px;line-height:1.6;}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-cta-gold{padding:16px 36px;border-radius:12px;background:linear-gradient(135deg,#F59E0B,#F97316);color:#fff;font-size:15px;font-weight:700;cursor:pointer;border:none;transition:var(--transition);box-shadow:0 8px 32px rgba(245,158,11,.4);display:inline-flex;align-items:center;gap:8px;}
+.btn-cta-gold:hover{transform:translateY(-2px);box-shadow:0 14px 44px rgba(245,158,11,.55);}
+.btn-cta-ghost{padding:16px 36px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:15px;font-weight:600;cursor:pointer;transition:var(--transition);}
+.btn-cta-ghost:hover{background:rgba(255,255,255,.15);transform:translateY(-2px);}
+/* ══════════════════════════════ ABOUT PAGE ══════════════════════════════ */
+.page-hero{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 50%,var(--navy-mid) 100%);padding:calc(var(--nav-h) + 80px) 0 80px;text-align:center;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 100%,rgba(8,145,178,.2),transparent 50%);}
+.page-hero-content{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 24px;}
+.page-hero-eyebrow{display:inline-block;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:2.4px;color:var(--gold);margin-bottom:14px;}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(36px,5.5vw,56px);font-weight:800;color:#fff;margin-bottom:18px;line-height:1.1;letter-spacing:-1px;}
+.page-hero p{font-size:18px;color:rgba(255,255,255,.65);line-height:1.6;}
+.about-mission{padding:96px 0;background:var(--surface);}
+.about-mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-mission-text h2{font-family:var(--font-display);font-size:36px;font-weight:800;color:var(--navy);margin-bottom:20px;letter-spacing:-.5px;}
+.about-mission-text p{font-size:15.5px;color:var(--text-mid);line-height:1.75;margin-bottom:18px;}
+.about-mission-text p strong{color:var(--navy);font-weight:700;}
+.about-quote-card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:24px;padding:48px;color:#fff;position:relative;overflow:hidden;}
+.about-quote-card::before{content:'"';position:absolute;top:-30px;right:24px;font-family:var(--font-display);font-size:200px;color:rgba(245,158,11,.15);line-height:1;}
+.about-quote{font-family:var(--font-display);font-size:22px;font-weight:600;line-height:1.45;margin-bottom:24px;position:relative;z-index:1;}
+.about-quote-author{position:relative;z-index:1;display:flex;align-items:center;gap:14px;}
+.about-quote-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#F97316);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#fff;flex-shrink:0;}
+.about-quote-name{font-size:14.5px;font-weight:700;color:#fff;}
+.about-quote-role{font-size:12.5px;color:rgba(255,255,255,.55);}
+.about-values{background:var(--bg);padding:96px 0;}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.value-card{padding:36px 28px;border-radius:18px;background:var(--surface);border:1px solid var(--border);transition:var(--transition);}
+.value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.value-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px;}
+.value-card h3{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:10px;letter-spacing:-.2px;}
+.value-card p{font-size:14px;color:var(--text-muted);line-height:1.65;}
+.about-founder{padding:96px 0;background:var(--surface);}
+.founders-duo{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:0 auto;}
+.founder-card{background:var(--navy-deep);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:40px 32px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:var(--transition);}
+.founder-card:hover{border-color:rgba(255,255,255,.18);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.founder-photo-wrap{width:120px;height:120px;border-radius:50%;overflow:hidden;border:3px solid var(--gold);margin-bottom:24px;box-shadow:0 8px 24px rgba(0,0,0,.4);}
+.founder-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.founder-card h3{font-family:var(--font-display);font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-.2px;}
+.founder-card .founder-title{font-size:13px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;}
+.founder-card .founder-subtitle{font-size:12px;color:rgba(255,255,255,.45);font-style:italic;margin-bottom:20px;}
+.founder-card p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:16px;}
+.founder-creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;justify-content:center;}
+.founder-cred{padding:5px 12px;border-radius:100px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:11.5px;font-weight:600;}
+/* ══════════════════════════════ CONTACT PAGE ════════════════════════════ */
+.contact-body{padding:80px 0;background:var(--bg);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:36px;}
+.contact-info-panel{background:var(--surface);border-radius:20px;padding:36px;border:1px solid var(--border);}
+.contact-info-panel h2{font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.3px;}
+.contact-info-panel > p{font-size:14px;color:var(--text-muted);margin-bottom:28px;line-height:1.6;}
+.contact-item{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
+.contact-item:last-of-type{border-bottom:none;margin-bottom:24px;}
+.contact-icon-box{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;flex-shrink:0;}
+.contact-label-small{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px;font-weight:600;margin-bottom:2px;}
+.contact-value-text{font-size:14.5px;font-weight:600;color:var(--text);}
+.contact-consult-card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:18px;padding:28px;color:#fff;}
+.contact-consult-card h3{font-family:var(--font-display);font-size:18px;font-weight:800;color:var(--gold-light);margin-bottom:8px;}
+.contact-consult-card p{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:20px;line-height:1.6;}
+.btn-consult{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;background:linear-gradient(135deg,#F59E0B,#F97316);color:#fff;font-size:14px;font-weight:700;text-decoration:none;transition:var(--transition);box-shadow:0 6px 20px rgba(245,158,11,.3);}
+.btn-consult:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(245,158,11,.45);}
+.contact-form-panel{background:var(--surface);border-radius:20px;padding:40px;border:1px solid var(--border);}
+.contact-form-panel h2{font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--navy);margin-bottom:6px;letter-spacing:-.3px;}
+.contact-form-panel > p{font-size:14px;color:var(--text-muted);margin-bottom:28px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{margin-bottom:18px;}
+.form-label{display:block;font-size:12px;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.form-input,.form-select,.form-textarea{width:100%;padding:13px 15px;border-radius:11px;border:1.5px solid var(--border);background:var(--surface-2);color:var(--text);font-size:14px;font-family:inherit;transition:var(--transition);outline:none;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(29,108,184,.12);}
+.form-textarea{resize:vertical;min-height:130px;line-height:1.6;}
+.btn-form-submit{width:100%;padding:15px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;font-size:15px;font-weight:700;cursor:pointer;border:none;transition:var(--transition);box-shadow:0 6px 20px rgba(29,108,184,.3);display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-form-submit:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(29,108,184,.45);}
+/* ══════════════════════════════ COURSE PLATFORM ═════════════════════════ */
+.course-header{background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 60%,var(--navy-mid) 100%);padding:calc(var(--nav-h) + 48px) 0 56px;position:relative;overflow:hidden;}
+.course-header::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(8,145,178,.18),transparent 50%);}
+.course-header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:28px;position:relative;z-index:1;}
+.course-welcome h1{font-family:var(--font-display);font-size:32px;font-weight:800;color:#fff;margin-bottom:6px;letter-spacing:-.5px;}
+.course-welcome p{font-size:14.5px;color:rgba(255,255,255,.55);}
+.course-progress-bar{flex:1;max-width:340px;min-width:240px;}
+.course-progress-label{font-size:11.5px;color:rgba(255,255,255,.55);margin-bottom:8px;display:flex;justify-content:space-between;font-weight:600;}
+.course-progress-label strong{color:var(--gold);}
+.course-progress-track{background:rgba(255,255,255,.08);border-radius:6px;height:10px;overflow:hidden;}
+.course-progress-fill{height:100%;border-radius:6px;width:0%;background:linear-gradient(90deg,var(--teal-bright),var(--blue-bright),var(--gold));transition:.8s ease;}
+.course-body{padding:64px 0;background:var(--bg);}
+.course-section{margin-bottom:56px;}
+.course-section-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;padding-bottom:14px;border-bottom:2px solid var(--border);}
+.course-section-title{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--navy);letter-spacing:-.3px;}
+.course-section-meta{font-size:13px;color:var(--text-muted);font-weight:600;}
+.phases-grid-course{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;}
+.phase-card-course{background:var(--surface);border-radius:14px;border:1.5px solid var(--border);padding:24px;cursor:pointer;transition:var(--transition);position:relative;overflow:hidden;}
+.phase-card-course::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:currentColor;}
+.phase-card-course:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:transparent;}
+.phase-badge-course{display:inline-block;padding:4px 11px;border-radius:100px;font-size:10.5px;font-weight:800;color:#fff;background:currentColor;margin-bottom:14px;text-transform:uppercase;letter-spacing:.6px;}
+.phase-badge-course span{color:#fff;}
+.phase-title-course{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:6px;line-height:1.3;}
+.phase-meta-course{font-size:11.5px;color:var(--text-muted);font-weight:500;}
+.phase-prog-mini{margin-top:16px;background:var(--bg);border-radius:4px;height:5px;overflow:hidden;}
+.phase-prog-fill-mini{height:100%;border-radius:4px;background:currentColor;transition:.6s;width:0%;}
+.modules-grid-course{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;}
+.module-card-course{background:var(--surface);border-radius:14px;border:1px solid var(--border);overflow:hidden;transition:var(--transition);}
+.module-card-course:hover{box-shadow:var(--shadow-md);}
+.module-card-hdr{display:flex;align-items:center;gap:16px;padding:20px 22px;cursor:pointer;}
+.module-num-course{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:14px;font-weight:800;color:#fff;flex-shrink:0;}
+.module-info-course{flex:1;min-width:0;}
+.module-title-course{font-size:14.5px;font-weight:800;color:var(--text);margin-bottom:3px;line-height:1.3;letter-spacing:-.1px;}
+.module-meta-course{font-size:11.5px;color:var(--text-muted);font-weight:500;}
+.module-arrow{font-size:18px;color:var(--text-muted);transition:transform var(--transition);}
+.module-card-hdr.open .module-arrow{transform:rotate(90deg);}
+.module-body-course{padding:0 22px 22px;display:none;border-top:1px solid var(--border);padding-top:18px;}
+.module-body-course.open{display:block;}
+.module-outcome{background:var(--blue-pale);border:1px solid rgba(29,108,184,.2);border-radius:11px;padding:14px 16px;margin-bottom:16px;}
+.module-outcome-label{font-size:10.5px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px;}
+.module-outcome p{font-size:12.5px;color:var(--text-mid);line-height:1.55;}
+.module-topics-label{font-size:11px;font-weight:800;color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;}
+.module-topics{list-style:none;}
+.module-topic{display:flex;align-items:flex-start;gap:10px;padding:6px 0;font-size:12.5px;color:var(--text-mid);line-height:1.55;border-bottom:1px solid var(--border);}
+.module-topic:last-child{border-bottom:none;}
+.module-topic::before{content:'›';color:var(--blue);font-weight:700;flex-shrink:0;}
+/* ══════════════════════════════ MODALS ══════════════════════════════════ */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(7,14,27,.78);backdrop-filter:blur(10px);z-index:2000;align-items:center;justify-content:center;padding:24px;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:var(--surface);border-radius:24px;max-width:480px;width:100%;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.4);animation:modalIn .4s cubic-bezier(.34,1.56,.64,1);max-height:92vh;overflow-y:auto;}
+.modal-box-lg{max-width:620px;}
+@keyframes modalIn{from{opacity:0;transform:scale(.92) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-hdr{padding:32px 32px 24px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 70%,var(--navy-mid) 100%);position:relative;overflow:hidden;}
+.modal-hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 100% 0%,rgba(245,158,11,.15),transparent 50%);}
+.modal-hdr-row{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;}
+.modal-hdr-content{flex:1;}
+.modal-hdr-title{font-family:var(--font-display);font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-.3px;}
+.modal-hdr-sub{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.5;}
+.modal-close{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:var(--transition);flex-shrink:0;}
+.modal-close:hover{background:rgba(255,255,255,.22);}
+.modal-body{padding:32px;}
+.modal-divider-text{text-align:center;position:relative;margin:24px 0;font-size:12px;color:var(--text-light);font-weight:500;}
+.modal-divider-text::before,.modal-divider-text::after{content:'';position:absolute;top:50%;width:40%;height:1px;background:var(--border);}
+.modal-divider-text::before{left:0;}
+.modal-divider-text::after{right:0;}
+.btn-social-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;}
+.btn-social{padding:12px;border-radius:11px;background:var(--surface-2);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--text);cursor:pointer;transition:var(--transition);}
+.btn-social:hover{border-color:var(--blue);background:var(--blue-pale);}
+.modal-perks{background:var(--surface-2);border-radius:14px;padding:18px;margin-top:20px;border:1px solid var(--border);}
+.modal-perks-label{font-size:11px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.modal-perk{display:flex;align-items:center;gap:10px;padding:4px 0;font-size:12.5px;color:var(--text-mid);}
+.modal-perk-check{color:var(--emerald);font-weight:800;}
+.modal-fineprint{font-size:11.5px;color:var(--text-muted);text-align:center;line-height:1.55;margin-top:18px;}
+.modal-fineprint a{color:var(--blue);font-weight:600;}
+/* ══════════════════════════════ TOAST ════════════════════════════════════ */
+#toast-container{position:fixed;bottom:24px;right:24px;z-index:3000;display:flex;flex-direction:column;gap:10px;pointer-events:none;}
+.toast{background:var(--navy);color:#fff;padding:14px 20px;border-radius:12px;font-size:13.5px;font-weight:500;box-shadow:var(--shadow-lg);opacity:0;transform:translateX(20px);transition:.3s;pointer-events:none;max-width:380px;display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.1);}
+.toast.show{opacity:1;transform:translateX(0);pointer-events:auto;}
+.toast.success{border-left:3px solid var(--emerald);}
+.toast.info{border-left:3px solid var(--blue-bright);}
+.toast-icon{font-size:18px;}
+/* ══════════════════════════════ FOOTER ══════════════════════════════════ */
+footer{background:var(--navy-deep);padding:72px 0 32px;border-top:1px solid rgba(255,255,255,.04);}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.footer-brand h3{font-family:var(--font-display);font-size:20px;font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.3px;}
+.footer-brand p{font-size:13.5px;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:20px;}
+.footer-mini-pills{display:flex;flex-wrap:wrap;gap:6px;}
+.footer-mini-pill{padding:4px 10px;border-radius:100px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);font-size:10.5px;color:rgba(255,255,255,.55);font-weight:500;}
+.footer-col h4{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);margin-bottom:18px;}
+.footer-link{display:block;font-size:13.5px;color:rgba(255,255,255,.55);margin-bottom:10px;cursor:pointer;transition:var(--transition);}
+.footer-link:hover{color:#fff;transform:translateX(2px);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.3);}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-badge{padding:5px 12px;border-radius:100px;border:1px solid rgba(255,255,255,.08);font-size:10.5px;color:rgba(255,255,255,.4);font-weight:600;letter-spacing:.4px;}
+/* ══════════════════════════════ COLOR HELPERS ═══════════════════════════ */
+.bg-p0{background:#7030A0;}.bg-p1{background:#1F4E79;}.bg-p2{background:#2E75B6;}.bg-p3{background:#16A34A;}
+.bg-p4{background:#C55A11;}.bg-p5{background:#C00000;}.bg-p6{background:#4472C4;}.bg-p7{background:#375623;}
+.bg-m1{background:#7030A0;}.bg-m2{background:#1F4E79;}.bg-m3{background:#C00000;}.bg-m4{background:#16A34A;}
+.bg-m5{background:#C55A11;}.bg-m6{background:#4472C4;}.bg-m7{background:#0891B2;}.bg-m8{background:#5B4FCF;}
+.bg-m9{background:#D97706;}.bg-m10{background:#16A34A;}.bg-m11{background:#375623;}.bg-m12{background:linear-gradient(135deg,#1F4E79,#D97706);}
+.pi-blue{background:linear-gradient(135deg,#1D6CB8,#1E3A5F);}
+.pi-purple{background:linear-gradient(135deg,#7C3AED,#5B21B6);}
+.pi-emerald{background:linear-gradient(135deg,#10B981,#047857);}
+.pi-amber{background:linear-gradient(135deg,#F59E0B,#D97706);}
+.pi-rose{background:linear-gradient(135deg,#EC4899,#BE185D);}
+.ai-blue{background:#EFF6FF;color:#1D6CB8;}
+.ai-purple{background:#F3E8FF;color:#7C3AED;}
+.ai-emerald{background:#D1FAE5;color:#059669;}
+.ai-amber{background:#FEF3C7;color:#D97706;}
+.ai-rose{background:#FCE7F3;color:#BE185D;}
+.ai-teal{background:#CFFAFE;color:#0891B2;}
+/* ══════════════════════════════ RESPONSIVE ══════════════════════════════ */
+@media(max-width:1100px){
+  .stats-grid{grid-template-columns:repeat(3,1fr);}
+  .stat-item:nth-child(-n+3){border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:32px;}
+  .stat-item:nth-child(3n){border-right:none;}
+  .journey-grid{grid-template-columns:repeat(4,1fr);}
+  .journey-line{display:none;}
+  .modules-grid{grid-template-columns:repeat(3,1fr);}
+  .pillars-grid{grid-template-columns:repeat(3,1fr);}
+  .cert-tiers{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:900px){
+  .hero-content{grid-template-columns:1fr;gap:48px;}
+  .hero-visual{order:-1;max-width:440px;margin:0 auto;width:100%;}
+  .tracks-grid{grid-template-columns:1fr;}
+  .about-mission-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .founders-duo{grid-template-columns:1fr;}
+  .challenge-grid{grid-template-columns:1fr;}
+  .values-grid{grid-template-columns:1fr;}
+  .proof-grid{grid-template-columns:1fr;}
+  .audience-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none;}
+  .nav-hamburger{display:flex;}
+  .section{padding:72px 0;}
+  .section-header{margin-bottom:42px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .stat-item{border-right:1px solid rgba(255,255,255,.06)!important;}
+  .stat-item:nth-child(2n){border-right:none!important;}
+  .journey-grid{grid-template-columns:repeat(4,1fr);}
+  .modules-grid{grid-template-columns:repeat(2,1fr);}
+  .pillars-grid{grid-template-columns:repeat(2,1fr);}
+  .audience-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;gap:36px;}
+  .form-row{grid-template-columns:1fr;}
+  .hero-actions{flex-direction:column;}
+  .btn-primary-lg,.btn-secondary-lg{width:100%;justify-content:center;}
+}
+@media(max-width:500px){
+  .modules-grid{grid-template-columns:1fr;}
+  .pillars-grid{grid-template-columns:1fr;}
+  .journey-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
+  .modules-grid-course,.phases-grid-course{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAVIGATION ════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <button id="nav-back-btn" class="nav-back-btn" onclick="goBack()">
+      <span class="nav-back-arrow">←</span>
+      <span id="nav-back-label">Back</span>
+    </button>
+    <div class="nav-logo" onclick="showPage('home')">
+      <div class="nav-logo-mark"><img src="https://genai-business-platform.vercel.app/techtelligence-logo.png" alt="TechTelligence"></div>
+      <div class="nav-logo-text">
+        <strong>TechTelligence</strong>
+        <span>EDU AI POLICY</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <button class="nav-link active" data-page="home" onclick="showPage('home')">Home</button>
+      <button class="nav-link" data-page="about" onclick="showPage('about')">About</button>
+      <button class="nav-link" data-page="contact" onclick="showPage('contact')">Contact Us</button>
+      <button class="nav-cta" onclick="openDemoModal()">Book a Demo <span style="font-size:13px">→</span></button>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-back" id="mobile-back-btn" onclick="goBack();closeMobileMenu()">
+    <span>←</span> <span id="mobile-back-label">Back</span>
+  </button>
+  <button class="mobile-menu-link active" data-mobile="home" onclick="showPage('home');closeMobileMenu()">🏠 Home</button>
+  <button class="mobile-menu-link" data-mobile="about" onclick="showPage('about');closeMobileMenu()">✦ About</button>
+  <button class="mobile-menu-link" data-mobile="contact" onclick="showPage('contact');closeMobileMenu()">✉ Contact Us</button>
+  <button class="mobile-menu-cta" onclick="openDemoModal();closeMobileMenu()">Book a Demo →</button>
+</div>
+
+<main>
+
+<!-- ════════════════════════════ HOME PAGE ════════════════════════════════ -->
+<section id="page-home" class="page active">
+
+  <!-- HERO -->
+  <div id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div>
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          🇦🇪 UAE & International Edition · 2026
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-line">From <span class="gradient-text">policy gap</span></span>
+          <span class="hero-title-line">to AI governance</span>
+          <span class="hero-title-line">excellence.</span>
+        </h1>
+        <p class="hero-sub">A complete professional development programme guiding K–12 districts and schools from initial AI landscape understanding through policy creation, board adoption, implementation, and sustained governance — aligned with UAE National AI Strategy 2031, UNESCO, ISTE, FERPA, COPPA, and PDPL.</p>
+        <div class="hero-pills">
+          <div class="hero-pill"><strong>8</strong>Training Phases</div>
+          <div class="hero-pill"><strong>12</strong>Course Modules</div>
+          <div class="hero-pill"><strong>16–20</strong>Hours</div>
+          <div class="hero-pill"><strong>10</strong>Ready Templates</div>
+          <div class="hero-pill"><strong>60+</strong>Policy Sources</div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary-lg" onclick="scrollToTracks()">
+            Explore the Programme <span class="btn-arrow">→</span>
+          </button>
+          <button class="btn-secondary-lg" onclick="openDemoModal()">
+            Book a Demo
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <div class="hero-card-label">8-Phase Journey</div>
+          <ul class="phase-mini-list">
+            <li class="phase-mini"><div class="phase-mini-dot bg-p0">P0</div><div class="phase-mini-info"><div class="phase-mini-name">Understanding the AI Landscape</div><div class="phase-mini-meta">Foundation · 90 min</div></div><div class="phase-mini-check">○</div></li>
+            <li class="phase-mini"><div class="phase-mini-dot bg-p1">P1</div><div class="phase-mini-info"><div class="phase-mini-name">Comprehensive AI Audit</div><div class="phase-mini-meta">Discovery · 120 min</div></div><div class="phase-mini-check">○</div></li>
+            <li class="phase-mini"><div class="phase-mini-dot bg-p2">P2</div><div class="phase-mini-info"><div class="phase-mini-name">Building Your Policy Team</div><div class="phase-mini-meta">Stakeholders · 90 min</div></div><div class="phase-mini-check">○</div></li>
+            <li class="phase-mini"><div class="phase-mini-dot bg-p3">P3</div><div class="phase-mini-info"><div class="phase-mini-name">Drafting Your AI Policy</div><div class="phase-mini-meta">Document · 180 min</div></div><div class="phase-mini-check">○</div></li>
+            <li class="phase-mini"><div class="phase-mini-dot bg-p4">P4</div><div class="phase-mini-info"><div class="phase-mini-name">Legal & Ethical Review</div><div class="phase-mini-meta">Validation · 120 min</div></div><div class="phase-mini-check">○</div></li>
+          </ul>
+        </div>
+        <div class="hero-float hero-float-1">
+          <span class="hero-float-big">3-Tier</span>
+          <span class="hero-float-small">Certification</span>
+        </div>
+        <div class="hero-float hero-float-2">
+          <span class="hero-float-big">10+</span>
+          <span class="hero-float-small">Templates</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div id="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><span class="stat-num">51%</span><div class="stat-label">of students already use AI for schoolwork</div></div>
+        <div class="stat-item"><span class="stat-num">15%</span><div class="stat-label">of districts have a formal AI policy</div></div>
+        <div class="stat-item"><span class="stat-num">8</span><div class="stat-label">phases to policy excellence</div></div>
+        <div class="stat-item"><span class="stat-num">12</span><div class="stat-label">comprehensive course modules</div></div>
+        <div class="stat-item"><span class="stat-num">11</span><div class="stat-label">sections in the complete policy document</div></div>
+        <div class="stat-item"><span class="stat-num">60+</span><div class="stat-label">policy documents analysed</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHALLENGE -->
+  <section id="challenge" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">The urgency</div>
+        <h2 class="section-title">The K–12 AI policy gap is widening fast.</h2>
+        <p class="section-sub">Students are already using generative AI daily. Districts are scrambling to respond. Without a formal, defensible governance framework, schools face compliance exposure, safeguarding incidents, and lost instructional trust.</p>
+      </div>
+      <div class="challenge-grid">
+        <div class="challenge-card color-red">
+          <div class="challenge-icon">⚠️</div>
+          <h3>Shadow AI is already here</h3>
+          <p>More than half of students use generative AI for schoolwork — often without staff knowledge. Without policy, unsupervised use creates academic integrity and safeguarding risk.</p>
+          <div class="challenge-stat"><strong>51%</strong>Student AI adoption rate (2024)</div>
+        </div>
+        <div class="challenge-card color-orange">
+          <div class="challenge-icon">📜</div>
+          <h3>Most districts are unprepared</h3>
+          <p>Only 15% of districts have a formal, board-adopted AI policy. The rest rely on ad-hoc guidance — leaving teachers, students, and parents without clear, enforceable expectations.</p>
+          <div class="challenge-stat"><strong>85%</strong>Districts with no formal AI policy</div>
+        </div>
+        <div class="challenge-card color-blue">
+          <div class="challenge-icon">⚖️</div>
+          <h3>Regulation is accelerating</h3>
+          <p>UAE PDPL, FERPA, COPPA, EU AI Act, UNESCO ethics guidance, and ADEK/KHDA frameworks all carry compliance obligations. Schools without policy face mounting legal and reputational exposure.</p>
+          <div class="challenge-stat"><strong>9+</strong>Frameworks schools must address</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO TRACKS -->
+  <section id="tracks" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow gold">Choose your path</div>
+        <h2 class="section-title">Two tracks. One transformation.</h2>
+        <p class="section-sub">Start free, self-paced — or partner with our experts for a fully facilitated, school-specific programme. Both tracks deliver the same world-class curriculum.</p>
+      </div>
+      <div class="tracks-grid">
+
+        <div class="track-card track-free">
+          <div class="track-hdr">
+            <div class="track-badge">Self-Paced · Freemium</div>
+            <div class="track-name">Freemium Access</div>
+            <div class="track-tagline">Full curriculum, on your schedule. Sign up free, learn at your own pace.</div>
+          </div>
+          <div class="track-body">
+            <div class="track-price-block">
+              <span class="track-price-amount">Free</span>
+              <span class="track-price-period">forever</span>
+            </div>
+            <ul class="track-features">
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text"><strong>All 8 training phases</strong> · self-paced unlock</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text"><strong>All 12 course modules</strong> with learning outcomes</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">Interactive knowledge checks & quizzes</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">Editable policy & template library (10+)</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">Progress tracking & digital certificate</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">Community forum access</span></li>
+            </ul>
+            <button class="btn-track" onclick="openSignInModal()">
+              Start Free — Sign Up <span class="btn-arrow">→</span>
+            </button>
+            <div class="track-meta-row">No credit card · Access immediately</div>
+          </div>
+        </div>
+
+        <div class="track-card track-premium featured">
+          <div class="track-hdr">
+            <div class="track-badge">Instructor-Led · Premium</div>
+            <div class="track-name">Cohort Programme</div>
+            <div class="track-tagline">Expert-facilitated. School-specific. Accredited certification. Built around your context.</div>
+          </div>
+          <div class="track-body">
+            <div class="track-price-block">
+              <span class="track-price-amount">Custom</span>
+              <span class="track-price-period">/ cohort</span>
+              <span class="track-price-note">Schools, districts, MATs & ministries</span>
+            </div>
+            <ul class="track-features">
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text"><strong>Everything in Freemium</strong>, plus:</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text"><strong>Live expert facilitation</strong> — on-site or virtual</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">Cohort-based learning with peer schools</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">School-specific policy review & customisation</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text"><strong>Accredited 3-tier certification</strong></span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">Direct mentorship from policy specialists</span></li>
+              <li class="track-feature"><span class="track-feature-check">✓</span><span class="track-feature-text">Capstone: governing body simulation</span></li>
+            </ul>
+            <button class="btn-track" onclick="showPage('contact');setInterest('Instructor-Led Programme')">
+              Contact Us <span class="btn-arrow">→</span>
+            </button>
+            <div class="track-meta-row">Pan-MENA & Africa · Remote & On-Site</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey">
+    <div class="container journey-content">
+      <div class="section-header center">
+        <div class="section-eyebrow gold">The 8-phase journey</div>
+        <h2 class="section-title light">From discovery to sustained governance.</h2>
+        <p class="section-sub light">A structured, phased pathway designed for K–12 leadership teams. Each phase produces a tangible artefact — building cumulatively toward a board-ready, defensible AI policy.</p>
+      </div>
+      <div class="journey-timeline">
+        <div class="journey-line"></div>
+        <div class="journey-grid">
+          <div class="journey-phase" onclick="openSignInModal('phase0')"><div class="journey-dot bg-p0">P0</div><div class="journey-num">Phase 0</div><div class="journey-phase-name">AI Landscape</div><div class="journey-phase-time">90 min</div></div>
+          <div class="journey-phase" onclick="openSignInModal('phase1')"><div class="journey-dot bg-p1">P1</div><div class="journey-num">Phase 1</div><div class="journey-phase-name">AI Audit</div><div class="journey-phase-time">120 min</div></div>
+          <div class="journey-phase" onclick="openSignInModal('phase2')"><div class="journey-dot bg-p2">P2</div><div class="journey-num">Phase 2</div><div class="journey-phase-name">Policy Team</div><div class="journey-phase-time">90 min</div></div>
+          <div class="journey-phase" onclick="openSignInModal('phase3')"><div class="journey-dot bg-p3">P3</div><div class="journey-num">Phase 3</div><div class="journey-phase-name">Drafting Policy</div><div class="journey-phase-time">180 min</div></div>
+          <div class="journey-phase" onclick="openSignInModal('phase4')"><div class="journey-dot bg-p4">P4</div><div class="journey-num">Phase 4</div><div class="journey-phase-name">Legal & Ethics</div><div class="journey-phase-time">120 min</div></div>
+          <div class="journey-phase" onclick="openSignInModal('phase5')"><div class="journey-dot bg-p5">P5</div><div class="journey-num">Phase 5</div><div class="journey-phase-name">Board Adoption</div><div class="journey-phase-time">90 min</div></div>
+          <div class="journey-phase" onclick="openSignInModal('phase6')"><div class="journey-dot bg-p6">P6</div><div class="journey-num">Phase 6</div><div class="journey-phase-name">Implementation</div><div class="journey-phase-time">150 min</div></div>
+          <div class="journey-phase" onclick="openSignInModal('phase7')"><div class="journey-dot bg-p7">P7</div><div class="journey-num">Phase 7</div><div class="journey-phase-name">Monitoring</div><div class="journey-phase-time">120 min</div></div>
+        </div>
+      </div>
+      <div class="journey-bottom">
+        <div class="journey-stat"><strong>16–20h</strong>Full programme runtime</div>
+        <div class="journey-stat"><strong>2-day</strong>Intensive workshop option</div>
+        <div class="journey-stat"><strong>10+</strong>Editable templates included</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES PREVIEW -->
+  <section id="modules-preview" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Course library</div>
+        <h2 class="section-title">12 modules. Built on Bloom's Taxonomy.</h2>
+        <p class="section-sub">A world-class curriculum analysing 60+ authoritative policy documents from the U.S. Department of Education, TeachAI, UNESCO, OECD, UAE Ministry of Education, ADEK, KHDA, and 30+ State Departments.</p>
+      </div>
+      <div class="modules-grid">
+
+        <div class="module-mini" onclick="openSignInModal('m1')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m1">M1</div><div><div class="module-mini-title">The AI Landscape in K–12</div><div class="module-mini-meta">Foundations · 90 min</div></div></div>
+          <div class="module-mini-body"><p>Understand AI types, terminology, shadow AI, and the global governance frameworks shaping K–12 education.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m2')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m2">M2</div><div><div class="module-mini-title">Ethical Foundations</div><div class="module-mini-meta">Ethics · 90 min</div></div></div>
+          <div class="module-mini-body"><p>Apply UNESCO's Ethics of AI, the CARE framework, and structured ethical decision-making to school contexts.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m3')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m3">M3</div><div><div class="module-mini-title">Legal & Regulatory</div><div class="module-mini-meta">Compliance · 120 min</div></div></div>
+          <div class="module-mini-body"><p>FERPA, COPPA, IDEA, PDPL, EU AI Act, ADEK, KHDA — practical compliance and vendor vetting.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m4')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m4">M4</div><div><div class="module-mini-title">Policy Architecture</div><div class="module-mini-meta">Design · 120 min</div></div></div>
+          <div class="module-mini-body"><p>The 12 essential sections of a world-class school AI policy and tiered permission models.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m5')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m5">M5</div><div><div class="module-mini-title">Risk Management</div><div class="module-mini-meta">Safeguarding · 120 min</div></div></div>
+          <div class="module-mini-body"><p>The 7-dimension risk assessment framework, deepfakes, cybersecurity, and child protection in AI contexts.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m6')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m6">M6</div><div><div class="module-mini-title">Stakeholder Roles</div><div class="module-mini-meta">Governance · 90 min</div></div></div>
+          <div class="module-mini-body"><p>The 9-stakeholder committee model and differentiated communication strategies.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m7')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m7">M7</div><div><div class="module-mini-title">AI & Pedagogy</div><div class="module-mini-meta">Teaching · 90 min</div></div></div>
+          <div class="module-mini-body"><p>SAMR & UDL applied to AI integration. Designing assignments that promote genuine thinking.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m8')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m8">M8</div><div><div class="module-mini-title">Academic Integrity</div><div class="module-mini-meta">Integrity · 90 min</div></div></div>
+          <div class="module-mini-body"><p>Tiered AI use frameworks, disclosure requirements, and IB/Cambridge/Pearson/AQA compliance.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m9')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m9">M9</div><div><div class="module-mini-title">Change Management</div><div class="module-mini-meta">Implementation · 120 min</div></div></div>
+          <div class="module-mini-body"><p>Kotter's 8-Step Model applied to AI policy, 30/60/90-day implementation, managing resistance.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m10')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m10">M10</div><div><div class="module-mini-title">Equity & Inclusion</div><div class="module-mini-meta">Equity · 90 min</div></div></div>
+          <div class="module-mini-body"><p>Algorithmic bias, IEP/SEN accommodations, ELL students, and culturally responsive governance.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m11')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m11">M11</div><div><div class="module-mini-title">Monitoring & Review</div><div class="module-mini-meta">Sustainability · 90 min</div></div></div>
+          <div class="module-mini-body"><p>The 5 monitoring streams and annual review cycles for sustained policy currency.</p></div>
+        </div>
+
+        <div class="module-mini" onclick="openSignInModal('m12')">
+          <div class="module-lock">🔒</div>
+          <div class="module-mini-hdr"><div class="module-num bg-m12">M12</div><div><div class="module-mini-title">Capstone Simulation</div><div class="module-mini-meta">Capstone · 180 min</div></div></div>
+          <div class="module-mini-body"><p>Present your complete AI policy package to a simulated governing body for certification.</p></div>
+        </div>
+
+      </div>
+      <div class="modules-cta">
+        <button class="btn-primary-lg" onclick="openSignInModal()">Unlock the Full Library — Free <span class="btn-arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section id="pillars" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">The framework</div>
+        <h2 class="section-title">The 5 pillars of a comprehensive AI policy.</h2>
+        <p class="section-sub">Every world-class K–12 AI policy stands on five interdependent pillars. Each is addressed across the programme — and represented in the final policy document.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card"><div class="pillar-icon pi-purple">⚖️</div><div class="pillar-name">Legal Compliance</div><div class="pillar-sub">FERPA · COPPA · PDPL · EU AI Act · ADEK · KHDA</div></div>
+        <div class="pillar-card"><div class="pillar-icon pi-blue">🔒</div><div class="pillar-name">Data Privacy</div><div class="pillar-sub">Vendor vetting · DPAs · Tokenisation · Retention</div></div>
+        <div class="pillar-card"><div class="pillar-icon pi-emerald">🎓</div><div class="pillar-name">Academic Integrity</div><div class="pillar-sub">Disclosure · AI Literacy · Tiered Use Models</div></div>
+        <div class="pillar-card"><div class="pillar-icon pi-amber">⚡</div><div class="pillar-name">Equity & Access</div><div class="pillar-sub">IEP · ELL · UDL · Digital Divide Mitigation</div></div>
+        <div class="pillar-card"><div class="pillar-icon pi-rose">🔄</div><div class="pillar-name">Governance & Review</div><div class="pillar-sub">Annual Review · Triggered Updates · Version Control</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORKS ALIGNED -->
+  <section id="frameworks-aligned">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Globally aligned</div>
+        <h2 class="section-title">Aligned with the frameworks that matter.</h2>
+        <p class="section-sub">Every module references the leading national, regional, and international policy instruments — so your final policy stands up to scrutiny from regulators, governing bodies, and awarding organisations alike.</p>
+      </div>
+      <div class="frameworks-strip">
+        <div class="framework-chip">UAE National AI Strategy<span>2031</span></div>
+        <div class="framework-chip">UNESCO<span>Ethics of AI</span></div>
+        <div class="framework-chip">OECD<span>AI Principles</span></div>
+        <div class="framework-chip">U.S. Dept of Education<span>AI Guidance 2023</span></div>
+        <div class="framework-chip">EU AI Act<span>Risk Tiers</span></div>
+        <div class="framework-chip">FERPA · COPPA<span>U.S. Federal</span></div>
+        <div class="framework-chip">UAE PDPL<span>Decree 45/2021</span></div>
+        <div class="framework-chip">ADEK<span>School AI Framework</span></div>
+        <div class="framework-chip">KHDA<span>AI Guidelines</span></div>
+        <div class="framework-chip">ISTE Standards<span>For Educators</span></div>
+        <div class="framework-chip">TeachAI<span>Industry Guidance</span></div>
+        <div class="framework-chip">NIST AI RMF<span>Risk Management</span></div>
+        <div class="framework-chip">IB Organisation<span>Awarding Body</span></div>
+        <div class="framework-chip">Cambridge CAIE<span>Awarding Body</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow gold">3-tier certification</div>
+        <h2 class="section-title light">Earn a credential that travels.</h2>
+        <p class="section-sub light">Progress through three credential tiers — from foundational literacy to recognised AI Lead status, with full school-specific policy portfolio.</p>
+      </div>
+      <div class="cert-tiers">
+
+        <div class="cert-tier">
+          <div class="cert-tier-hdr">
+            <div class="cert-tier-icon">🎓</div>
+            <div class="cert-tier-name">Foundation</div>
+            <div class="cert-tier-subtitle">For all educators & staff</div>
+          </div>
+          <div class="cert-tier-body">
+            <ul class="cert-req-list">
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Complete Modules 1–4</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Pass Knowledge Checks (≥ 70%)</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Capstone Part 1 — AI Audit</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Digital badge & PDF certificate</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cert-tier">
+          <div class="cert-tier-hdr">
+            <div class="cert-tier-icon">🏅</div>
+            <div class="cert-tier-name">Practitioner</div>
+            <div class="cert-tier-subtitle">For policy committee members</div>
+          </div>
+          <div class="cert-tier-body">
+            <ul class="cert-req-list">
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Complete all 12 modules</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Capstone Parts 1 & 2 — Audit + Policy Sprint</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Submit draft policy document</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Signed credential & LinkedIn badge</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cert-tier tier-advanced">
+          <div class="cert-tier-hdr">
+            <div class="cert-tier-icon">🏆</div>
+            <div class="cert-tier-name">Advanced AI Lead</div>
+            <div class="cert-tier-subtitle">For designated AI Leads & DPOs</div>
+          </div>
+          <div class="cert-tier-body">
+            <ul class="cert-req-list">
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Practitioner + Capstone Part 3</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>School-specific policy portfolio</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Governing body simulation pass</li>
+              <li class="cert-req"><span class="cert-req-icon">✓</span>Listed on TechTelligence AI Lead Registry</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section id="audience" class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">Who it's for</div>
+        <h2 class="section-title">Designed for the full K–12 leadership stack.</h2>
+        <p class="section-sub">Whether you're shaping district policy, leading a single school, or facilitating teacher PD — this programme provides the structures, language, and templates you need.</p>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card"><div class="audience-icon ai-blue">🏫</div><div class="audience-info"><h3>Principals & Heads of School</h3><p>Build a defensible, board-ready policy and lead its implementation with confidence.</p></div></div>
+        <div class="audience-card"><div class="audience-icon ai-purple">🏛️</div><div class="audience-info"><h3>District / MAT Leadership</h3><p>Develop multi-school governance frameworks and align across schools and grade bands.</p></div></div>
+        <div class="audience-card"><div class="audience-icon ai-emerald">🛡️</div><div class="audience-info"><h3>IT Directors & DPOs</h3><p>Master vendor vetting, DPAs, FERPA/COPPA/PDPL compliance, and AI tool risk assessment.</p></div></div>
+        <div class="audience-card"><div class="audience-icon ai-amber">📚</div><div class="audience-info"><h3>Curriculum Coordinators</h3><p>Integrate AI into instruction with SAMR & UDL — and design AI-resistant assessments.</p></div></div>
+        <div class="audience-card"><div class="audience-icon ai-rose">🧑‍🏫</div><div class="audience-info"><h3>Teachers & Dept Heads</h3><p>Apply tiered AI-use frameworks, manage disclosure, and become school-level AI champions.</p></div></div>
+        <div class="audience-card"><div class="audience-icon ai-teal">⚖️</div><div class="audience-info"><h3>Governing Body Members</h3><p>Develop the literacy needed to scrutinise, approve, and oversee AI policy at board level.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL / PROOF -->
+  <section id="proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div>
+          <div class="proof-quote">"Schools cannot afford to be reactive on AI. A defensible, board-adopted policy — built on legal compliance, equity, and pedagogical integrity — is now the minimum bar of responsible school leadership."</div>
+          <div class="proof-author">
+            <div class="proof-avatar">OA</div>
+            <div>
+              <div class="proof-name">Dr. Osama Almashaleh</div>
+              <div class="proof-role">Founder, TechTelligence Academy</div>
+            </div>
+          </div>
+        </div>
+        <div class="proof-stats">
+          <div class="proof-stat-card"><div class="proof-stat-num">60+</div><div class="proof-stat-label">Policy documents analysed across U.S., UK, UAE, EU & OECD</div></div>
+          <div class="proof-stat-card"><div class="proof-stat-num">30+</div><div class="proof-stat-label">U.S. state departments of education referenced</div></div>
+          <div class="proof-stat-card"><div class="proof-stat-num">12</div><div class="proof-stat-label">Bloom's-aligned modules from Foundations to Capstone</div></div>
+          <div class="proof-stat-card"><div class="proof-stat-num">10+</div><div class="proof-stat-label">Editable, ready-to-deploy templates included</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="cta-banner">
+    <div class="cta-content">
+      <h2 class="cta-title">Your school's AI policy starts here.</h2>
+      <p class="cta-sub">Start free, self-paced — or book a discovery call to scope an instructor-led cohort for your district. No commitment required.</p>
+      <div class="cta-actions">
+        <button class="btn-cta-gold" onclick="openSignInModal()">Start Free Track <span class="btn-arrow">→</span></button>
+        <button class="btn-cta-ghost" onclick="openDemoModal()">Book a Demo</button>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ════════════════════════════ ABOUT PAGE ═══════════════════════════════ -->
+<section id="page-about" class="page">
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">About us</div>
+      <h1>Built by educators. Backed by 60+ policy frameworks.</h1>
+      <p>TechTelligence Academy designs world-class professional development for K–12 schools navigating AI — combining policy depth, ethical grounding, and operational practicality.</p>
+    </div>
+  </div>
+
+  <section class="about-mission">
+    <div class="container">
+      <div class="about-mission-grid">
+        <div class="about-mission-text">
+          <h2>Our Mission</h2>
+          <p><strong>To equip every school with the policy, pedagogy, and governance infrastructure to responsibly harness AI for student learning.</strong></p>
+          <p>The world's school leaders are being asked to govern a technology that did not exist in their professional training. We bridge that gap — translating the leading global frameworks (UNESCO, OECD, U.S. DoE, EU AI Act, UAE National AI Strategy, ADEK, KHDA, FERPA, COPPA, PDPL) into practical, school-ready policy infrastructure.</p>
+          <p>We believe AI literacy is the new fourth literacy — and that governance excellence is the foundation on which safe, equitable, and pedagogically sound AI integration is built.</p>
+        </div>
+        <div class="about-quote-card">
+          <div class="about-quote">School leaders don't need more AI hype. They need clarity, a defensible policy, and a programme that respects how schools actually work.</div>
+          <div class="about-quote-author">
+            <div class="about-quote-avatar">OA</div>
+            <div>
+              <div class="about-quote-name">Dr. Osama Almashaleh</div>
+              <div class="about-quote-role">Founder & Programme Director</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-values">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-eyebrow">What we stand for</div>
+        <h2 class="section-title">Four operating principles.</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card"><div class="value-icon ai-purple">📚</div><h3>Evidence-led</h3><p>Every framework, template, and recommendation in our programme is anchored in published policy from authoritative national and international bodies.</p></div>
+        <div class="value-card"><div class="value-icon ai-blue">🎯</div><h3>School-ready</h3><p>Our materials are designed for schools as they actually are — not as a tech vendor imagines them. Practical, editable, deployable in week one.</p></div>
+        <div class="value-card"><div class="value-icon ai-emerald">⚖️</div><h3>Ethics-first</h3><p>UNESCO's Ethics of AI Recommendation and equity-of-access principles sit at the centre of every policy template we provide.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-founder">
+    <div class="container">
+      <div class="section-header center" style="margin-bottom:48px;">
+        <div class="section-eyebrow">Leadership</div>
+        <h2 class="section-title">Meet the co-founders.</h2>
+      </div>
+      <div class="founders-duo">
+
+        <!-- Dr. Osama -->
+        <div class="founder-card">
+          <div class="founder-photo-wrap">
+            <img src="team-osama.jpg" alt="Dr. Osama S. Al Mashaleh">
+          </div>
+          <h3>Dr. Osama S. Al Mashaleh</h3>
+          <div class="founder-title">Co-Founder &amp; CEO</div>
+          <div class="founder-subtitle">Chief Executive Officer</div>
+          <p>A UAE-based EdTech entrepreneur and technology strategist with deep expertise in AI governance, digital transformation, and education business development. He co-founded TechTelligence Academy to build the definitive AI policy infrastructure for K–12 institutions across Pan-MENA and Africa — turning compliance complexity into competitive advantage for schools and districts.</p>
+          <div class="founder-creds">
+            <span class="founder-cred">UAE-Based</span>
+            <span class="founder-cred">K–12 AI Policy</span>
+            <span class="founder-cred">UNESCO-Aligned</span>
+            <span class="founder-cred">Pan-MENA &amp; Africa</span>
+            <span class="founder-cred">Policy Architect</span>
+          </div>
+        </div>
+
+        <!-- Eng. Israa -->
+        <div class="founder-card">
+          <div class="founder-photo-wrap">
+            <img src="team-israa.png" alt="Eng. Israa Lulu">
+          </div>
+          <h3>Eng. Israa Lulu</h3>
+          <div class="founder-title">Co-Founder &amp; CAILO</div>
+          <div class="founder-subtitle">Chief AI &amp; Learning Officer</div>
+          <p>An AI and learning design specialist driving the Academy's curriculum architecture and programme quality. Eng. Lulu leads the translation of AI governance frameworks into school-ready learning experiences — ensuring every module is pedagogically sound and practically deployable.</p>
+          <div class="founder-creds">
+            <span class="founder-cred">AI &amp; Learning Design</span>
+            <span class="founder-cred">Curriculum Architecture</span>
+            <span class="founder-cred">K–12 Specialist</span>
+            <span class="founder-cred">EdTech Leader</span>
+            <span class="founder-cred">UAE-Based</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="cta-banner" style="margin-top:0">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to work with us?</h2>
+      <p class="cta-sub">Book a discovery call or start the free programme today.</p>
+      <div class="cta-actions">
+        <button class="btn-cta-gold" onclick="openDemoModal()">Book a Demo <span class="btn-arrow">→</span></button>
+        <button class="btn-cta-ghost" onclick="showPage('contact')">Contact Us</button>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ════════════════════════════ CONTACT PAGE ═════════════════════════════ -->
+<section id="page-contact" class="page">
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">Contact us</div>
+      <h1>Let's talk about your school's AI policy.</h1>
+      <p>Whether you're exploring the freemium track, scoping an instructor-led cohort, or simply have a question — we'd love to hear from you.</p>
+    </div>
+  </div>
+
+  <div class="contact-body">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div>
+          <div class="contact-info-panel">
+            <h2>Reach Us</h2>
+            <p>We respond to most enquiries within one working day.</p>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">✉️</div>
+              <div>
+                <div class="contact-label-small">Email</div>
+                <div class="contact-value-text">info@techtelligence.ae</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">📞</div>
+              <div>
+                <div class="contact-label-small">Phone</div>
+                <div class="contact-value-text">+971 52 2215 883</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">📍</div>
+              <div>
+                <div class="contact-label-small">Coverage</div>
+                <div class="contact-value-text">Pan-MENA & Africa · Remote & On-Site</div>
+              </div>
+            </div>
+
+            <div class="contact-consult-card">
+              <h3>Book a Free Consultation</h3>
+              <p>Schedule a 30-minute discovery call with one of our AI policy specialists to scope what's possible for your school or district.</p>
+              <a href="#" onclick="openDemoModal();return false;" class="btn-consult">Schedule Now <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-panel">
+          <h2>Send Us a Message</h2>
+          <p>Tell us about your school and what you're hoping to achieve.</p>
+          <form onsubmit="handleContactForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" id="cf-first" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-input" id="cf-last" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" id="cf-email" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">School / Institution</label>
+                <input type="text" class="form-input" id="cf-school">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Country / Emirate</label>
+                <input type="text" class="form-input" id="cf-country">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">I'm interested in</label>
+              <select class="form-select" id="cf-interest">
+                <option value="">Select an option</option>
+                <option>Freemium (Self-Paced) Programme</option>
+                <option>Instructor-Led Programme</option>
+                <option>On-Site Workshop</option>
+                <option>Policy Document Review</option>
+                <option>Free Consultation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" id="cf-message" placeholder="Tell us about your school context and what you're hoping to achieve..."></textarea>
+            </div>
+            <button type="submit" class="btn-form-submit">Send Message <span class="btn-arrow">→</span></button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ COURSE PLATFORM (after sign-in) ═══════════════ -->
+<section id="page-course" class="page">
+
+  <div class="course-header">
+    <div class="container course-header-inner">
+      <div class="course-welcome">
+        <h1>Welcome back, <span id="user-name-display">Educator</span>.</h1>
+        <p>Your K–12 AI policy programme dashboard · Freemium track</p>
+      </div>
+      <div class="course-progress-bar">
+        <div class="course-progress-label"><span>Programme Progress</span><strong id="progress-text">0 of 8 phases</strong></div>
+        <div class="course-progress-track"><div class="course-progress-fill" id="progress-fill"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-body">
+    <div class="container">
+
+      <div class="course-section">
+        <div class="course-section-hdr">
+          <h2 class="course-section-title">8 Training Phases</h2>
+          <div class="course-section-meta">Sequential · Build cumulatively</div>
+        </div>
+        <div class="phases-grid-course">
+          <div class="phase-card-course" style="color:#7030A0" onclick="toast('Opening Phase 0 — Understanding the AI Landscape')"><div class="phase-badge-course"><span>Phase 0</span></div><div class="phase-title-course">Understanding the AI Landscape</div><div class="phase-meta-course">Build shared vocabulary · 90 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+          <div class="phase-card-course" style="color:#1F4E79" onclick="toast('Opening Phase 1 — Comprehensive AI Audit')"><div class="phase-badge-course"><span>Phase 1</span></div><div class="phase-title-course">Comprehensive AI Audit</div><div class="phase-meta-course">Inventory tools & gaps · 120 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+          <div class="phase-card-course" style="color:#2E75B6" onclick="toast('Opening Phase 2 — Building Your Policy Team')"><div class="phase-badge-course"><span>Phase 2</span></div><div class="phase-title-course">Building Your Policy Team</div><div class="phase-meta-course">Assemble the committee · 90 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+          <div class="phase-card-course" style="color:#16A34A" onclick="toast('Opening Phase 3 — Drafting Your AI Policy')"><div class="phase-badge-course"><span>Phase 3</span></div><div class="phase-title-course">Drafting Your AI Policy</div><div class="phase-meta-course">11-section document · 180 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+          <div class="phase-card-course" style="color:#C55A11" onclick="toast('Opening Phase 4 — Legal, Ethical & Equity Review')"><div class="phase-badge-course"><span>Phase 4</span></div><div class="phase-title-course">Legal, Ethical & Equity Review</div><div class="phase-meta-course">Validate the draft · 120 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+          <div class="phase-card-course" style="color:#C00000" onclick="toast('Opening Phase 5 — Approval & Board Adoption')"><div class="phase-badge-course"><span>Phase 5</span></div><div class="phase-title-course">Approval & Board Adoption</div><div class="phase-meta-course">Navigate governance · 90 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+          <div class="phase-card-course" style="color:#4472C4" onclick="toast('Opening Phase 6 — Implementation & PD')"><div class="phase-badge-course"><span>Phase 6</span></div><div class="phase-title-course">Implementation & PD</div><div class="phase-meta-course">90-day launch · 150 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+          <div class="phase-card-course" style="color:#375623" onclick="toast('Opening Phase 7 — Monitoring & Annual Review')"><div class="phase-badge-course"><span>Phase 7</span></div><div class="phase-title-course">Monitoring & Annual Review</div><div class="phase-meta-course">Sustainable governance · 120 min</div><div class="phase-prog-mini"><div class="phase-prog-fill-mini" style="width:0%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <div class="course-section-hdr">
+          <h2 class="course-section-title">12 Course Modules</h2>
+          <div class="course-section-meta">Bloom's Taxonomy aligned</div>
+        </div>
+        <div class="modules-grid-course">
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m1">M1</div>
+              <div class="module-info-course"><div class="module-title-course">The AI Landscape in K–12 Education</div><div class="module-meta-course">Foundations · 90 min · All Audiences</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L2 — Understand)</div><p>Explain the key components of a school AI governance framework — policy architecture, stakeholder roles, and core ethical principles — and articulate why each is essential.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">AI types, tools, and terminology for school settings</li>
+                <li class="module-topic">Current adoption: 51% student AI use, shadow AI dynamics</li>
+                <li class="module-topic">Global frameworks: U.S. DoE, UNESCO, OECD, EU AI Act</li>
+                <li class="module-topic">UAE National AI Strategy 2031 implications for K–12</li>
+                <li class="module-topic">The regulatory gap — why schools must develop context-specific governance</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m2">M2</div>
+              <div class="module-info-course"><div class="module-title-course">Ethical Foundations and Values</div><div class="module-meta-course">Ethics · 90 min · Leaders & Teachers</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L4 — Analyse)</div><p>Analyse AI-related risks across fairness, transparency, accountability, and human oversight — and apply structured ethical decision-making to school AI scenarios.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">Institutional values as foundation for AI policy</li>
+                <li class="module-topic">Algorithmic bias and student outcomes</li>
+                <li class="module-topic">UNESCO Ethics of AI Recommendation (2021)</li>
+                <li class="module-topic">UAE cultural values and AI governance integration</li>
+                <li class="module-topic">CARE framework: Critical · Accountable · Responsible · Equitable</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m3">M3</div>
+              <div class="module-info-course"><div class="module-title-course">Legal and Regulatory Foundations</div><div class="module-meta-course">Compliance · 120 min · Leaders & Legal</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L5 — Evaluate)</div><p>Evaluate AI tools against legal compliance standards, data protection requirements, and equity considerations using a structured risk assessment framework.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">FERPA, COPPA, IDEA, ADA, Section 504 (US Federal)</li>
+                <li class="module-topic">UAE PDPL (Federal Decree-Law 45/2021) practical compliance</li>
+                <li class="module-topic">ADEK School AI Framework and KHDA AI Guidelines</li>
+                <li class="module-topic">EU AI Act risk tiers for international schools</li>
+                <li class="module-topic">Data Processing Agreements (DPAs) and vendor vetting</li>
+                <li class="module-topic">CIPA and child online safety (UAE Child Rights Law, KCSIE)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m4">M4</div>
+              <div class="module-info-course"><div class="module-title-course">AI Policy Architecture and Design</div><div class="module-meta-course">Design · 120 min · Policy Committee</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L6 — Create)</div><p>Construct a complete, school-specific AI policy addressing permitted/prohibited uses, data privacy, academic integrity, safeguarding, and stakeholder accountability.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">Policy vs. guidance — document hierarchy</li>
+                <li class="module-topic">The 12 essential sections of a world-class school AI policy</li>
+                <li class="module-topic">Tiered permission models (universally permitted · pre-approved · prohibited)</li>
+                <li class="module-topic">Grade-band differentiation: K–2, 3–5, 6–8, 9–12</li>
+                <li class="module-topic">BYOD integration with AI governance</li>
+                <li class="module-topic">Version control and policy lifecycle management</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m5">M5</div>
+              <div class="module-info-course"><div class="module-title-course">Risk Management and Safeguarding</div><div class="module-meta-course">Safety · 120 min · Leaders, IT & Safeguarding</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L4–6 — Analyse/Create)</div><p>Design risk identification, mitigation, and monitoring processes that protect students from AI-related harms within your specific institutional context.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">AI risk taxonomy: privacy, bias, cybersecurity, misinformation, deepfakes</li>
+                <li class="module-topic">The 7-dimension AI Tool Risk Assessment Framework</li>
+                <li class="module-topic">Safeguarding protocols and child protection in AI contexts</li>
+                <li class="module-topic">Deepfake & AI-generated misinformation response</li>
+                <li class="module-topic">Procurement and approval processes for AI tools</li>
+                <li class="module-topic">UAE Child Rights Law and digital wellbeing guidelines</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m6">M6</div>
+              <div class="module-info-course"><div class="module-title-course">Stakeholder Roles and Responsibilities</div><div class="module-meta-course">Governance · 90 min · All Leadership</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L3–6 — Apply/Create)</div><p>Develop differentiated stakeholder communication and engagement strategies that build sustained community support for responsible AI governance.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">Governance roles: AI Lead, DPO, Governing Body, SLT</li>
+                <li class="module-topic">Responsibilities for teaching and non-teaching staff</li>
+                <li class="module-topic">Student and parent/guardian communication frameworks</li>
+                <li class="module-topic">The 9-stakeholder committee model</li>
+                <li class="module-topic">Multilingual communication for UAE/international communities</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m7">M7</div>
+              <div class="module-info-course"><div class="module-title-course">AI and Pedagogy</div><div class="module-meta-course">Teaching · 90 min · Teachers & Curriculum</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L3 — Apply)</div><p>Apply evidence-based pedagogical frameworks to integrate AI tools purposefully into curriculum design, assessment, and differentiated instruction.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">Bloom's Taxonomy and AI — matching tool to cognitive level</li>
+                <li class="module-topic">SAMR framework applied to AI integration</li>
+                <li class="module-topic">UDL and AI tools for accessibility</li>
+                <li class="module-topic">AI-enhanced formative assessment</li>
+                <li class="module-topic">Designing AI-resistant assignments</li>
+                <li class="module-topic">Professional practice: AI for lesson planning and differentiation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m8">M8</div>
+              <div class="module-info-course"><div class="module-title-course">Academic Integrity in the Age of AI</div><div class="module-meta-course">Integrity · 90 min · Teachers & Leaders</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L5 — Evaluate)</div><p>Evaluate student work for appropriate AI use, implement fair disclosure requirements, and respond to suspected AI misconduct with a principled investigation process.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">Tiered AI-use frameworks and assignment classification</li>
+                <li class="module-topic">AI declaration and disclosure by grade band</li>
+                <li class="module-topic">Investigating suspected AI misconduct</li>
+                <li class="module-topic">Awarding body compliance: IB, Cambridge CAIE, Pearson, AQA, UAE MoE</li>
+                <li class="module-topic">AI detection tools — capabilities, limitations, and fairness</li>
+                <li class="module-topic">AI-assisted vs AI-generated work — policy implications</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m9">M9</div>
+              <div class="module-info-course"><div class="module-title-course">Implementation & Change Management</div><div class="module-meta-course">Implementation · 120 min · Leaders</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L3 — Apply)</div><p>Apply evidence-based change management strategies to lead AI policy implementation — including managing resistance, building capacity, and engaging diverse stakeholders.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">School AI Readiness Audit — 5 dimensions</li>
+                <li class="module-topic">Kotter's 8-Step Model applied to AI policy</li>
+                <li class="module-topic">30/60/90-day phased implementation</li>
+                <li class="module-topic">Managing fear-based, minimising, and turf-protective resistance</li>
+                <li class="module-topic">Building teacher AI champions</li>
+                <li class="module-topic">Multilingual community engagement for UAE/international schools</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m10">M10</div>
+              <div class="module-info-course"><div class="module-title-course">Equity, Inclusion & Culturally Responsive AI</div><div class="module-meta-course">Equity · 90 min · All Staff</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L4–5 — Analyse/Evaluate)</div><p>Identify and address equity gaps in AI policy — ensuring governance protects students with disabilities, ELL students, and those from under-resourced communities.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">Algorithmic bias — sources, types, and educational impact</li>
+                <li class="module-topic">The digital equity gap in AI access</li>
+                <li class="module-topic">IEP/SEN and AI accommodations — legal and best practice</li>
+                <li class="module-topic">EAL/ELL students and AI translation tools</li>
+                <li class="module-topic">Culturally responsive governance in UAE multicultural contexts</li>
+                <li class="module-topic">UDL as an equity framework for AI</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m11">M11</div>
+              <div class="module-info-course"><div class="module-title-course">Monitoring, Review & Continuous Improvement</div><div class="module-meta-course">Sustainability · 90 min · AI Coordinators</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L5 — Evaluate)</div><p>Design a sustainable AI governance cycle with monitoring streams, triggered review protocols, and annual review — maintaining policy currency as AI evolves.</p></div>
+              <div class="module-topics-label">Topics covered</div>
+              <ul class="module-topics">
+                <li class="module-topic">Policy review cycles: annual, incident-triggered, technology-driven</li>
+                <li class="module-topic">The 5 monitoring streams</li>
+                <li class="module-topic">Building a culture of responsible AI use</li>
+                <li class="module-topic">KPIs for AI policy effectiveness</li>
+                <li class="module-topic">Version control and communicating changes</li>
+                <li class="module-topic">Succession planning and institutional knowledge</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="module-card-course">
+            <div class="module-card-hdr" onclick="toggleModuleCourse(this)">
+              <div class="module-num-course bg-m12">M12</div>
+              <div class="module-info-course"><div class="module-title-course">Capstone — Governing Body Simulation</div><div class="module-meta-course">Capstone · 180 min · Full Cohort</div></div>
+              <span class="module-arrow">›</span>
+            </div>
+            <div class="module-body-course">
+              <div class="module-outcome"><div class="module-outcome-label">Learning Outcome (Bloom's L6 — Create)</div><p>Present a complete school-specific AI Policy package to a simulated governing body, incorporating all elements from Modules 1–11.</p></div>
+              <div class="module-topics-label">Capstone deliverables</div>
+              <ul class="module-topics">
+                <li class="module-topic">Workshop 1: The AI Governance Audit (30 min)</li>
+                <li class="module-topic">Workshop 2: Policy Sprint — drafting your AI policy (60 min)</li>
+                <li class="module-topic">Workshop 3: Guidance Suite + Governing Body Simulation (90 min)</li>
+                <li class="module-topic">Complete school AI policy document (11+ sections)</li>
+                <li class="module-topic">Student AI charter (age-appropriate versions)</li>
+                <li class="module-topic">Parent communication letter & disclosure forms</li>
+                <li class="module-topic">12-month Policy Review Cycle Tracker</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════════════════════ FOOTER ═══════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>TechTelligence · EDU AI Policy</h3>
+        <p>World-class K–12 AI policy professional development. Built on 60+ authoritative policy frameworks. Designed for the realities of school leadership across MENA & Africa.</p>
+        <div class="footer-mini-pills">
+          <span class="footer-mini-pill">🇦🇪 UAE-Based</span>
+          <span class="footer-mini-pill">UNESCO-Aligned</span>
+          <span class="footer-mini-pill">Pan-MENA</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Programme</h4>
+        <a class="footer-link" onclick="showPage('home')">Overview</a>
+        <a class="footer-link" onclick="scrollToTracks()">Two Tracks</a>
+        <a class="footer-link" onclick="openSignInModal()">Start Free</a>
+        <a class="footer-link" onclick="openDemoModal()">Book a Demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a class="footer-link" onclick="showPage('about')">About</a>
+        <a class="footer-link" onclick="showPage('contact')">Contact</a>
+        <a class="footer-link" href="mailto:info@techtelligence.ae">info@techtelligence.ae</a>
+        <a class="footer-link" href="tel:+971522215883">+971 52 2215 883</a>
+      </div>
+      <div class="footer-col">
+        <h4>Aligned With</h4>
+        <a class="footer-link">UAE National AI Strategy 2031</a>
+        <a class="footer-link">UNESCO · OECD · ISTE</a>
+        <a class="footer-link">FERPA · COPPA · PDPL</a>
+        <a class="footer-link">ADEK · KHDA · EU AI Act</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 TechTelligence Academy. All rights reserved.</div>
+      <div class="footer-badges">
+        <span class="footer-badge">Privacy First</span>
+        <span class="footer-badge">PDPL Compliant</span>
+        <span class="footer-badge">FERPA-Safe</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════ MODALS ═══════════════════════════════════ -->
+
+<!-- Sign In Modal (Freemium) -->
+<div class="modal-overlay" id="modal-signin">
+  <div class="modal-box">
+    <div class="modal-hdr">
+      <div class="modal-hdr-row">
+        <div class="modal-hdr-content">
+          <div class="modal-hdr-title">Start the Free Programme</div>
+          <div class="modal-hdr-sub">Sign up to unlock all 8 phases and 12 modules — no credit card required.</div>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-signin')">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="btn-social-row">
+        <button class="btn-social" onclick="handleSocialSignIn('Google')">
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M15.5 8.18c0-.54-.04-1.06-.14-1.55H8v2.94h4.21c-.18 1-.74 1.84-1.58 2.41v2h2.55c1.49-1.38 2.36-3.41 2.36-5.8z" fill="#4285F4"/><path d="M8 16c2.13 0 3.92-.71 5.22-1.93l-2.55-2c-.71.47-1.62.75-2.67.75-2.06 0-3.8-1.39-4.42-3.26h-2.6v2.04C2.27 14.05 4.93 16 8 16z" fill="#34A853"/><path d="M3.58 9.56C3.42 9.07 3.33 8.55 3.33 8s.09-1.07.25-1.56V4.4H.97C.35 5.49 0 6.71 0 8s.35 2.51.97 3.6l2.61-2.04z" fill="#FBBC05"/><path d="M8 3.16c1.16 0 2.21.4 3.03 1.18l2.27-2.27C11.92.8 10.13 0 8 0 4.93 0 2.27 1.95.97 4.4l2.61 2.04C4.2 4.56 5.94 3.16 8 3.16z" fill="#EA4335"/></svg>
+          Google
+        </button>
+        <button class="btn-social" onclick="handleSocialSignIn('Microsoft')">
+          <svg width="16" height="16" viewBox="0 0 16 16"><rect width="7" height="7" fill="#F25022"/><rect x="8" width="7" height="7" fill="#7FBA00"/><rect y="8" width="7" height="7" fill="#00A4EF"/><rect x="8" y="8" width="7" height="7" fill="#FFB900"/></svg>
+          Microsoft
+        </button>
+      </div>
+      <div class="modal-divider-text">or sign up with email</div>
+      <form onsubmit="handleSignIn(event)">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" id="si-name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" id="si-email" required placeholder="you@school.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">School / Role</label>
+          <input type="text" class="form-input" id="si-school" placeholder="e.g. Principal, Lincoln High School">
+        </div>
+        <button type="submit" class="btn-form-submit">Create Account & Start Free <span class="btn-arrow">→</span></button>
+      </form>
+      <div class="modal-perks">
+        <div class="modal-perks-label">What you get instantly</div>
+        <div class="modal-perk"><span class="modal-perk-check">✓</span>Full access to all 8 phases & 12 modules</div>
+        <div class="modal-perk"><span class="modal-perk-check">✓</span>Editable policy & template library</div>
+        <div class="modal-perk"><span class="modal-perk-check">✓</span>Progress tracking & digital certificate</div>
+      </div>
+      <div class="modal-fineprint">By signing up you agree to our terms. We respect your privacy — read our <a href="#">policy</a>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Book a Demo Modal -->
+<div class="modal-overlay" id="modal-demo">
+  <div class="modal-box modal-box-lg">
+    <div class="modal-hdr">
+      <div class="modal-hdr-row">
+        <div class="modal-hdr-content">
+          <div class="modal-hdr-title">Book a Demo</div>
+          <div class="modal-hdr-sub">30-minute discovery call with a TechTelligence AI policy specialist.</div>
+        </div>
+        <button class="modal-close" onclick="closeModal('modal-demo')">×</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <form onsubmit="handleDemoForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" id="dm-first" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" id="dm-last" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Work Email</label>
+          <input type="email" class="form-input" id="dm-email" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">School / District</label>
+            <input type="text" class="form-input" id="dm-school" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Country / Emirate</label>
+            <input type="text" class="form-input" id="dm-country">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Approximate Cohort Size</label>
+          <select class="form-select" id="dm-size">
+            <option>Single school (up to 50 staff)</option>
+            <option>Multi-school (50–200 staff)</option>
+            <option>District / MAT (200–1,000 staff)</option>
+            <option>Ministry / Network (1,000+ staff)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">What would you like to focus on?</label>
+          <textarea class="form-textarea" id="dm-notes" placeholder="Tell us briefly about your timeline and any specific concerns..."></textarea>
+        </div>
+        <button type="submit" class="btn-form-submit">Request Discovery Call <span class="btn-arrow">→</span></button>
+      </form>
+      <div class="modal-fineprint">We'll reply within one working day. Pan-MENA & Africa coverage · remote & on-site delivery.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div id="toast-container"></div>
+
+<script>
+/* ══════════════════════════ STATE ══════════════════════════════════════ */
+let userState = { signedIn:false, name:'Educator', email:'' };
+
+/* ══════════════════════════ PAGE NAVIGATION ════════════════════════════ */
+let _pageHistory = [];
+let _currentPage = 'home';
+
+function showPage(pageId, addToHistory){
+  if(addToHistory !== false && _currentPage && _currentPage !== pageId){
+    _pageHistory.push(_currentPage);
+  }
+  _currentPage = pageId;
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const map = { home:'page-home', about:'page-about', contact:'page-contact', course:'page-course' };
+  const target = map[pageId] || pageId;
+  const el = document.getElementById(target);
+  if(el) el.classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l=>{
+    l.classList.toggle('active', l.dataset.page === pageId);
+  });
+  document.querySelectorAll('.mobile-menu-link').forEach(l=>{
+    l.classList.toggle('active', l.dataset.mobile === pageId);
+  });
+  _updateBackButton();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goBack(){
+  if(_currentPage === 'home'){
+    window.open('https://www.techtelligence.ae','_blank');
+    return;
+  }
+  if(_pageHistory.length > 0){
+    const prev = _pageHistory.pop();
+    showPage(prev, false);
+  } else {
+    showPage('home', false);
+  }
+}
+
+function _updateBackButton(){
+  const btn = document.getElementById('nav-back-btn');
+  const label = document.getElementById('nav-back-label');
+  const mBtn = document.getElementById('mobile-back-btn');
+  const mLabel = document.getElementById('mobile-back-label');
+  if(!btn) return;
+
+  const pageNames = { home:'Home', about:'About', contact:'Contact Us', course:'Courses' };
+
+  btn.style.display = 'flex';
+  if(mBtn) mBtn.style.display = 'flex';
+  if(_currentPage === 'home'){
+    btn.classList.add('site-return');
+    label.textContent = 'techtelligence.ae';
+    if(mBtn) mLabel.textContent = 'techtelligence.ae';
+  } else {
+    btn.classList.remove('site-return');
+    const prev = _pageHistory.length > 0 ? _pageHistory[_pageHistory.length-1] : 'home';
+    const prevName = pageNames[prev] || 'Back';
+    label.textContent = '← ' + prevName;
+    if(mBtn) mLabel.textContent = prevName;
+  }
+}
+
+function scrollToTracks(){
+  const el = document.getElementById('tracks');
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ══════════════════════════ MOBILE MENU ════════════════════════════════ */
+function toggleMobileMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+/* ══════════════════════════ NAV SCROLL ═════════════════════════════════ */
+window.addEventListener('scroll', ()=>{
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+/* ══════════════════════════ MODALS ═════════════════════════════════════ */
+function openModal(id){
+  document.getElementById(id).classList.add('open');
+  document.body.classList.add('no-scroll');
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  document.body.classList.remove('no-scroll');
+}
+function openSignInModal(deepLink){
+  if(userState.signedIn){
+    showPage('course');
+    if(deepLink) toast('Jumping to ' + deepLink, 'success');
+    return;
+  }
+  openModal('modal-signin');
+}
+function openDemoModal(){ openModal('modal-demo'); }
+
+document.querySelectorAll('.modal-overlay').forEach(m=>{
+  m.addEventListener('click', e=>{ if(e.target === m) m.classList.remove('open'), document.body.classList.remove('no-scroll'); });
+});
+
+/* ══════════════════════════ SIGN-IN HANDLER ═══════════════════════════ */
+function handleSignIn(e){
+  e.preventDefault();
+  const name = document.getElementById('si-name').value.trim();
+  const email = document.getElementById('si-email').value.trim();
+  if(!name || !email) return;
+  userState = { signedIn:true, name, email };
+  document.getElementById('user-name-display').textContent = name.split(' ')[0];
+  closeModal('modal-signin');
+  toast('Welcome, ' + name.split(' ')[0] + '! Your free programme is unlocked.', 'success');
+  setTimeout(()=> showPage('course'), 600);
+}
+
+function handleSocialSignIn(provider){
+  userState = { signedIn:true, name:'TechTelligence Educator', email:'demo@school.com' };
+  document.getElementById('user-name-display').textContent = 'Educator';
+  closeModal('modal-signin');
+  toast('Signed in with ' + provider + '. Your programme is ready.', 'success');
+  setTimeout(()=> showPage('course'), 600);
+}
+
+/* ══════════════════════════ FORMS ══════════════════════════════════════ */
+function handleContactForm(e){
+  e.preventDefault();
+  const f = document.getElementById('cf-first').value.trim();
+  toast('Thanks, ' + (f || 'Educator') + '. We\'ll reply within one working day.', 'success');
+  e.target.reset();
+}
+function handleDemoForm(e){
+  e.preventDefault();
+  const f = document.getElementById('dm-first').value.trim();
+  closeModal('modal-demo');
+  toast('Demo request received, ' + (f || 'Educator') + '. We\'ll be in touch within 24h.', 'success');
+  e.target.reset();
+}
+function setInterest(val){
+  setTimeout(()=>{
+    const sel = document.getElementById('cf-interest');
+    if(sel){
+      [...sel.options].forEach(o => { if(o.value === val || o.text === val) sel.value = o.value; });
+    }
+  }, 400);
+}
+
+/* ══════════════════════════ COURSE PLATFORM ═══════════════════════════ */
+function toggleModuleCourse(hdr){
+  hdr.classList.toggle('open');
+  hdr.nextElementSibling.classList.toggle('open');
+}
+
+/* ══════════════════════════ TOAST ══════════════════════════════════════ */
+function toast(message, type){
+  const c = document.getElementById('toast-container');
+  const t = document.createElement('div');
+  t.className = 'toast ' + (type || 'info');
+  t.innerHTML = '<span class="toast-icon">' + (type === 'success' ? '✅' : 'ℹ️') + '</span>' + message;
+  c.appendChild(t);
+  setTimeout(()=> t.classList.add('show'), 10);
+  setTimeout(()=>{ t.classList.remove('show'); setTimeout(()=> t.remove(), 300); }, 3800);
+}
+
+/* ══════════════════════════ ESC TO CLOSE ═══════════════════════════════ */
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape'){
+    document.querySelectorAll('.modal-overlay.open').forEach(m=> m.classList.remove('open'));
+    document.body.classList.remove('no-scroll');
+    closeMobileMenu();
+  }
+});
+
+// initialise back button on first load
+_updateBackButton();
+</script>
+</body>
+</html>
