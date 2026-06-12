@@ -49,8 +49,8 @@ button{font-family:inherit;}
 .hidden{display:none!important;}
 .no-scroll{overflow:hidden;}
 /* ══════════════════════════════ NAVIGATION ════════════════════════════════ */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:rgba(8,21,35,.6);backdrop-filter:blur(20px) saturate(1.6);-webkit-backdrop-filter:blur(20px) saturate(1.6);border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:center;transition:var(--transition);}
-#nav.scrolled{background:rgba(8,21,35,.55);box-shadow:0 4px 30px rgba(0,0,0,.4);}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:transparent;border-bottom:1px solid transparent;display:flex;align-items:center;transition:background .3s,border-color .3s,box-shadow .3s;}
+#nav.scrolled{background:rgba(8,21,35,.85);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid rgba(31,59,88,.55);box-shadow:0 10px 30px -24px #000;}
 .nav-inner{max-width:1240px;margin:0 auto;padding:0 24px;width:100%;display:flex;align-items:center;gap:32px;}
 /* hub breadcrumb — back to main website */
 .hub-breadcrumb{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-weight:700;font-size:13.5px;color:rgba(255,255,255,.5);white-space:nowrap;flex-shrink:0;transition:color .2s,transform .2s;}
@@ -62,18 +62,17 @@ button{font-family:inherit;}
 @media(max-width:768px){.hub-bc-text,.hub-bc-sep{display:none;}.hub-bc-back{display:inline;}.hub-breadcrumb{font-size:18px;}}
 .nav-logo{display:flex;align-items:center;gap:12px;flex-shrink:0;cursor:pointer;}
 @property --logo-hue{syntax:'<angle>';inherits:false;initial-value:0deg;}
-.nav-logo-mark{width:52px;height:52px;border-radius:15px;background:radial-gradient(circle at 50% 40%,#ffffff 0%,#eef7ff 60%,#dbeafb 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:6px;position:relative;isolation:isolate;box-shadow:0 3px 12px rgba(6,182,212,.20),0 2px 6px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.85);transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s ease;}
-/* holographic rotating ring (echoes the logoShimmer brand gradient) */
-.nav-logo-mark::before{content:"";position:absolute;inset:-2px;border-radius:inherit;padding:2px;background:conic-gradient(from var(--logo-hue),#22D3EE,#3B82F6,#A78BFA,#EC4899,#F59E0B,#22D3EE);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;animation:logoRingSpin 7s linear infinite;opacity:.9;z-index:0;}
-/* breathing cyan aura halo, transparent center so the chip stays clean */
-.nav-logo-mark::after{content:"";position:absolute;inset:-7px;border-radius:20px;background:radial-gradient(circle,transparent 42%,rgba(34,211,238,.5) 60%,rgba(59,130,246,.2) 74%,transparent 84%);filter:blur(5px);z-index:-1;animation:logoAura 3.6s ease-in-out infinite;}
-.nav-logo-mark img{width:100%;height:100%;object-fit:contain;display:block;filter:brightness(1.06) contrast(1.06) drop-shadow(0 1px 1px rgba(10,40,80,.18));position:relative;z-index:1;}
-.nav-logo:hover .nav-logo-mark{transform:translateY(-2px) scale(1.05);box-shadow:0 9px 28px rgba(6,182,212,.45),0 3px 10px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.95);}
-.nav-logo:hover .nav-logo-mark::before{opacity:1;animation-duration:2.5s;}
+.nav-logo-mark{width:54px;height:54px;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;isolation:isolate;transition:transform .4s cubic-bezier(.34,1.56,.64,1);}
+/* Frameless logo: no white box/ring — just a layered white glow so the
+   transparent mark stays clear on the dark navbar. */
+.nav-logo-mark::after{content:"";position:absolute;inset:-7px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.92) 0%,rgba(255,255,255,.6) 44%,rgba(255,255,255,.18) 64%,transparent 76%);filter:blur(2.5px);z-index:-1;}
+.nav-logo-mark img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 0 3px rgba(255,255,255,1)) drop-shadow(0 0 8px rgba(255,255,255,.9)) drop-shadow(0 0 14px rgba(255,255,255,.55));position:relative;z-index:1;}
+.nav-logo:hover .nav-logo-mark{transform:translateY(-2px) scale(1.05);}
+.nav-logo:hover .nav-logo-mark img{filter:drop-shadow(0 0 4px rgba(255,255,255,1)) drop-shadow(0 0 11px rgba(255,255,255,1)) drop-shadow(0 0 18px rgba(255,255,255,.65));}
 @keyframes logoRingSpin{to{--logo-hue:360deg;}}
 @keyframes logoAura{0%,100%{opacity:.4;transform:scale(.95);}50%{opacity:.9;transform:scale(1.06);}}
-@media (prefers-reduced-motion:reduce){.nav-logo-mark::before,.nav-logo-mark::after{animation:none;}.nav-logo:hover .nav-logo-mark{transform:none;}}
-.nav-logo-text strong{display:block;font-family:var(--font-display);font-size:18px;font-weight:800;letter-spacing:-.3px;line-height:1.1;background:linear-gradient(110deg,#FCD34D 0%,#F59E0B 25%,#EC4899 50%,#A78BFA 75%,#06B6D4 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoShimmer 6s linear infinite;}
+@media (prefers-reduced-motion:reduce){.nav-logo:hover .nav-logo-mark{transform:none;}}
+.nav-logo-text strong{display:block;font-family:var(--font-display);font-size:17px;font-weight:800;letter-spacing:.2px;line-height:1.1;background:linear-gradient(110deg,#2DD4BF 0%,#38BDF8 28%,#6366F1 56%,#A78BFA 80%,#E879F9 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoShimmer 6s linear infinite;}
 .nav-logo-text span{display:block;font-size:11px;font-weight:800;margin-top:3px;letter-spacing:2.2px;background:linear-gradient(90deg,#06B6D4 0%,#3B82F6 33%,#A78BFA 66%,#F59E0B 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:logoShimmer 6s linear infinite reverse;text-transform:uppercase;}
 @keyframes logoShimmer{0%{background-position:0% center;}100%{background-position:200% center;}}
 .nav-links{display:flex;align-items:center;gap:4px;margin-left:auto;}
@@ -607,8 +606,8 @@ body{background-color:transparent;background-image:none;}
     <div class="nav-logo" onclick="showPage('home')">
       <div class="nav-logo-mark"><img src="techtelligence-logo-new.png" alt="TechTelligence"></div>
       <div class="nav-logo-text">
-        <strong>TechTelligence</strong>
-        <span>EDU AI POLICY</span>
+        <strong>Intentional AI Policy</strong>
+        <span>by TechTelligence</span>
       </div>
     </div>
     <div class="nav-links">
@@ -1601,7 +1600,7 @@ body{background-color:transparent;background-image:none;}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>TechTelligence · EDU AI Policy</h3>
+        <h3>Intentional AI Policy · by TechTelligence</h3>
         <p>World-class K–12 AI policy professional development. Built on 60+ authoritative policy frameworks. Designed for the realities of school leadership across MENA & Africa.</p>
         <div class="footer-mini-pills">
           <span class="footer-mini-pill">🇦🇪 UAE-Based</span>
