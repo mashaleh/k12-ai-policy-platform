@@ -52,12 +52,17 @@ button{font-family:inherit;}
 #nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:transparent;border-bottom:1px solid transparent;display:flex;align-items:center;transition:background .3s,border-color .3s,box-shadow .3s;}
 #nav.scrolled{background:rgba(8,21,35,.85);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid rgba(31,59,88,.55);box-shadow:0 10px 30px -24px #000;}
 .nav-inner{max-width:1240px;margin:0 auto;padding:0 24px;width:100%;display:flex;align-items:center;gap:32px;}
-/* hub breadcrumb — back to main website (techtelligence.ae) */
-.hub-breadcrumb{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700;font-size:13px;color:rgba(255,255,255,.6);white-space:nowrap;flex-shrink:0;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 14px;transition:color .2s,border-color .2s,background .2s,transform .2s;}
-.hub-breadcrumb:hover{color:#fff;border-color:rgba(34,211,238,.5);background:rgba(34,211,238,.08);transform:translateX(-2px);}
-.hub-bc-arrow{font-size:15px;line-height:1;}
-.hub-bc-text{font-weight:700;}
-@media(max-width:768px){.hub-bc-text{display:none;}.hub-breadcrumb{padding:8px 11px;}.hub-bc-arrow{font-size:18px;}}
+/* return-to-hub button — top-right, glass pill w/ animated brand sheen */
+.return-home{--rh-accent:#ec4899;position:relative;display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;font-weight:700;font-size:12.5px;letter-spacing:.2px;line-height:1;color:rgba(255,255,255,.88);text-decoration:none;white-space:nowrap;flex-shrink:0;isolation:isolate;overflow:hidden;border:1px solid transparent;background:linear-gradient(rgba(9,14,24,.6),rgba(9,14,24,.6)) padding-box,linear-gradient(120deg,var(--rh-accent),color-mix(in srgb,var(--rh-accent) 22%,transparent) 58%,rgba(255,255,255,.12)) border-box;-webkit-backdrop-filter:blur(9px) saturate(140%);backdrop-filter:blur(9px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 6px 16px -10px rgba(0,0,0,.7);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .3s,color .2s}
+.return-home::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,transparent 34%,color-mix(in srgb,var(--rh-accent) 32%,transparent) 50%,transparent 66%);transform:translateX(-130%);transition:transform .75s ease}
+.return-home:hover{transform:translateY(-1px);color:#fff;box-shadow:0 10px 24px -10px var(--rh-accent),inset 0 1px 0 rgba(255,255,255,.16)}
+.return-home:hover::before{transform:translateX(130%)}
+.return-home:focus-visible{outline:2px solid var(--rh-accent);outline-offset:2px}
+.rh-ico{width:14px;height:14px;color:var(--rh-accent);flex:none;transition:transform .25s}
+.return-home:hover .rh-ico{transform:translateX(-2px)}
+.rh-dot{width:6px;height:6px;border-radius:50%;background:var(--rh-accent);box-shadow:0 0 8px var(--rh-accent);flex:none;animation:rhpulse 2.4s ease-in-out infinite}
+@keyframes rhpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.72)}}
+@media(max-width:768px){.return-home .rh-label{display:none}.return-home{padding:9px}}
 .nav-logo{display:flex;align-items:center;gap:12px;flex-shrink:0;cursor:pointer;}
 @property --logo-hue{syntax:'<angle>';inherits:false;initial-value:0deg;}
 .nav-logo-mark{width:54px;height:54px;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;isolation:isolate;transition:transform .4s cubic-bezier(.34,1.56,.64,1);}
@@ -600,10 +605,6 @@ body{background-color:transparent;background-image:none;}
 <!-- ═══════════════════════════ NAVIGATION ════════════════════════════════ -->
 <nav id="nav">
   <div class="nav-inner">
-    <a class="hub-breadcrumb" href="https://techtelligence.ae" aria-label="Back to TechTelligence main website">
-      <span class="hub-bc-arrow" aria-hidden="true">←</span>
-      <span class="hub-bc-text">techtelligence.ae</span>
-    </a>
     <div class="nav-logo" onclick="showPage('home')">
       <div class="nav-logo-mark"><img src="techtelligence-logo-new.png" alt="TechTelligence"></div>
       <div class="nav-logo-text">
@@ -617,6 +618,11 @@ body{background-color:transparent;background-image:none;}
       <button class="nav-link" data-page="contact" onclick="showPage('contact')">Contact Us</button>
       <button class="nav-cta" onclick="openDemoModal()">Book a Demo <span style="font-size:13px">→</span></button>
     </div>
+    <a class="return-home" href="https://techtelligence.ae" aria-label="Return to TechTelligence main site">
+      <svg class="rh-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10.8 9-7.8 9 7.8"/><path d="M5.2 9.2V21h13.6V9.2"/></svg>
+      <span class="rh-label">techtelligence.ae</span>
+      <span class="rh-dot" aria-hidden="true"></span>
+    </a>
     <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
